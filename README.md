@@ -80,3 +80,8 @@
 3. >Git: Clone
 4. 저장소 주소 입력
 5. 저장소 소스가 복제될 폴더 선택
+
+### Contributor
+
+- heroyooi
+- wildjy
