@@ -1,0 +1,37 @@
+@charset "utf-8";
+@import "config";
+
+#header {
+    h1 {
+        padding: 10px;
+        a {
+            display: block;
+            font-size: 32px;
+            font-weight: 700;
+            color: #000;
+            // background: url($img-comm-path + "logo.svg") 0 0 no-repeat;
+        }
+        
+    }
+}
+
+#container {
+    .test-text {
+        margin-top: 10px;
+        width: 150px;
+        background: gold;
+        font-size: 14px;
+        font-weight: 500;
+        color: #333;
+        border-radius: 3px;
+        overflow: hidden;
+        @include text-multi-line(2, 20px, 40px, true);
+        &2 {
+            margin-top: 10px;
+            width: 150px;
+            background: aqua;
+            border-radius: 3px;
+            @include text-ellipis;
+        }
+    }
+}
