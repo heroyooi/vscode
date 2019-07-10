@@ -1,5 +1,18 @@
 # VSCODE REPOSITORY
 
+## VSCode Settings
+
+### 설정 변경
+
+1. Ctrl + , : Settings 탭 열기
+2. Edit in settings.json > 다음 내용 추가
+
+```json
+{
+    "editor.tabSize": 2 // tabSize 변경 - default: 4
+}
+```
+
 ## VSCode Extensions
 
 - Auto Close Tag
@@ -30,6 +43,19 @@
 - Alt + L + C : 라이브서버 닫기
 
 ## Using Extensions
+
+### emmet - jsx 지원
+
+1. Ctrl + , : Settings 탭 열기
+2. Edit in settings.json > 다음 내용 추가
+
+```json
+{
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    }
+}
+```
 
 ### SFTP
 
