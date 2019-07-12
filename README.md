@@ -111,3 +111,12 @@
 
 - heroyooi
 - wildjy
+
+## Node 관련 명령어
+
+※ node_modules 폴더 삭제
+
+```command
+npm i -g rimraf
+rimraf node_modules
+```
