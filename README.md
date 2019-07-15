@@ -13,6 +13,15 @@
 }
 ```
 
+### 설정 초기화
+
+※ 완전하게 초기 상태로 원복된다.
+
+1. C:\Users\유저명\.vscode - 폴더 삭제
+2. C:\Users\유저명\AppData\Roaming\code - 폴더 삭제
+3. 제어판 - 프로그램 추가/제거 - visual studio code 삭제
+4. vs code 재설치
+
 ## VSCode Extensions
 
 - Auto Close Tag
