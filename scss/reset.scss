@@ -1,7 +1,7 @@
 @charset "utf-8";
 @import "config";
 
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean");
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei|Noto+Sans+KR:300,400,500,700,900&display=swap&subset=korean');
 /*
  * font-weight information
  * thin 100, light 300, regular 400, medium 500, bold 700, black 900
@@ -118,22 +118,24 @@ body{
 body,input,select,textarea,button{
     font-family:$font-family;
     font-size: 14px;
-    font-weight:400;
-    color:#000;
-    line-height: 1;
+    line-height: 1.5;
+    color: #666;
     letter-spacing:-.5px;
 }
 textarea{
     resize:none;
 }
-.hide{
-    position:absolute;
-    left:-9999px;
-    font-size:0;
+.blind, legend, caption {
     width:0;
     height:0;
-    text-indent:-9999px;
+    position:absolute;
     overflow:hidden;
+    font-size:0;
+    line-height:0;
+    z-index:-1;
+    visibility:hidden;
+    left: -9999px;
+    text-indent: -9999px;
 }
 .mt10{
     margin-top:10px !important;

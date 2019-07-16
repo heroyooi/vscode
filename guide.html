@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Project Title </title>
+  <link rel="stylesheet" type="text/css" href="/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/css/magnific-popup.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/jquery.mCustomScrollbar.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/slick.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/selectric.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/css/commonModule.css">
+  <link rel="stylesheet" type="text/css" href="/css/guide.css">
+	<link rel="stylesheet" type="text/css" href="http://codemirror.net/lib/codemirror.css">
+	<link rel="stylesheet" type="text/css" href="https://codemirror.net/2/theme/monokai.css">
+  <script src="/js/jquery-1.12.4.min.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
+  <script src="/js/custom.datepicker.js"></script>
+  <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script><![endif]-->
+  <script src="/js/jquery.magnific-popup.min.js"></script>
+  <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="/js/jquery.selectric.min.js"></script>
+  <script src="/js/jquery.tooltip.min.js"></script>
+  <script src="/js/slick.min.js"></script>
+  <script src="/js/placeholder.min.js"></script>
+</head>
+<body>
+  <a href="#content" class="skip-navi">본문 바로가기</a>
+  <div id="wrapper" class="guide-wrap">
+    <div id="container">
+      <div id="content" class="guide-sec">
+        <div class="guide-tit">
+          <h1>Project Name</h1>
+          <div class="btns-wrap">
+            <span class="btn-base on"><a href="#guide-ui">UI</a></span>
+            <span class="btn-base"><a href="#guide-map">코딩맵</a></span>
+          </div>
+        </div>
+        <div class="guide-panel">
+          <div id="guide-ui">
+
+            <!-- POPUP -->
+            <div class="guide-box" id="popup">
+              <h2 class="tit">POPUP</h2>
+              <div class="gb-inner">
+<span class="btn-popup btn-base tp2"><a href="#popup-modal">MODAL 팝업</a></span>
+
+<span class="btn-popup-anim-1 btn-base tp2"><a href="#popup-anim-1">애니메이션 팝업 1 - BODY 고정</a></span>
+
+<span class="btn-popup-anim-2 btn-base tp2"><a href="#popup-anim-2">애니메이션 팝업 2 - BODY 움직임</a></span>
+
+<span class="btn-popup-ajax btn-base tp2"><a href="popup.html">AJAX 팝업</a></span>
+
+<div id="popup-modal" class="popup-wrap mfp-hide">
+<a href="#" class="b-mfp-close">팝업 닫기</a>
+<div class="dummy-txt"></div>
+</div>
+
+<div id="popup-anim-1" class="popup-wrap z-anim mfp-hide">
+<div class="dummy-txt"></div>
+</div>
+
+<div id="popup-anim-2" class="popup-wrap z-anim mfp-hide">
+<div class="dummy-txt"></div>
+</div>
+              </div>
+            </div>
+            <!-- //POPUP -->
+
+            <!-- CALENDAR -->
+            <div class="guide-box" id="calendar">
+              <h2 class="tit">CALENDAR</h2>
+              <div class="gb-inner search-wrap">
+
+<h3>왕복</h3>
+<!-- 왕복 -->
+<div class="search-box o-shuttle">
+    <div class="cont dates">
+        <a href="#" class="area on" data-panel="calendar">
+            <span class="label">여행날짜</span>
+            <span class="input">
+				<span class="chkin" data-day="2019/07/21">07월 21일 (금)</span>
+				<span class="bridge on">-</span>
+				<span class="chkout" data-day="2019/08/21">08월 21일 (일)</span>
+				<span class="result-days"><span class="num"></span>박</span>
+            </span>
+        </a>
+    </div>
+    <div class="ui-search-panel ui-calendar">
+		<div class="uis-datepicker"></div>
+	</div><!-- //ui-calendar -->
+</div>
+<!-- //왕복 -->
+
+<h3>편도 </h3>
+<!-- 편도 -->
+<div class="search-box o-oneway">
+    <div class="cont dates">
+        <a href="#" class="area" data-panel="calendar">
+            <span class="label">여행날짜</span>
+            <span class="input">
+                <span class="chkin" data-day=""></span>
+            </span>
+        </a>
+    </div>
+    <div class="ui-search-panel ui-calendar">
+		<div class="uis-datepicker"></div>
+	</div><!-- //ui-calendar -->
+</div>
+<!-- //편도 -->
+
+<h3>다구간</h3>
+<!-- 다구간 -->
+<div class="search-box o-multiway">
+    <ol class="list-cont">
+        <li class="md-1 on">
+            <div class="cont number">
+                <div class="number-inner">
+                    <span class="txt1 c">여정</span>
+                    <span class="txt2 c">01</span>
+                </div>
+            </div>
+            <div class="cont dates">
+                <a href="#" class="area" data-panel="calendar">
+                    <span class="label">여행날짜</span>
+                    <span class="input">
+                        <span class="chkin" data-day=""></span>
+                    </span>
+                </a>
+            </div>
+        </li>
+        <li class="md-2 on">
+            <div class="cont number">
+                <div class="number-inner">
+                    <span class="txt1 c">여정</span>
+                    <span class="txt2 c">02</span>
+                </div>
+            </div>
+            <div class="cont dates">
+                <a href="#" class="area" data-panel="calendar">
+                    <span class="label">여행날짜</span>
+                    <span class="input">
+                        <span class="chkin" data-day=""></span>
+                    </span>
+                </a>
+            </div>
+            <div class="btn-add">
+                <button type="button" class="b-remove-multiway"><span class="hide">다구간 삭제</span></button>
+            </div>
+        </li>
+        <li class="md-3">
+            <div class="cont number">
+                <div class="number-inner">
+                    <span class="txt1 c">여정</span>
+                    <span class="txt2 c">03</span>
+                </div>
+            </div>
+            <div class="cont dates">
+                <a href="#" class="area" data-panel="calendar">
+                    <span class="label">여행날짜</span>
+                    <span class="input">
+                        <span class="chkin" data-day=""></span>
+                    </span>
+                </a>
+            </div>
+            <div class="btn-add">
+                <button type="button" class="b-remove-multiway"><span class="hide">다구간 삭제</span></button>
+            </div>
+        </li>
+        <li class="md-4">
+            <div class="cont number">
+                <div class="number-inner">
+                    <span class="txt1 c">여정</span>
+                    <span class="txt2 c">04</span>
+                </div>
+            </div>
+            <div class="cont dates">
+                <a href="#" class="area" data-panel="calendar">
+                    <span class="label">여행날짜</span>
+                    <span class="input">
+                        <span class="chkin" data-day=""></span>
+                    </span>
+                </a>
+            </div>
+            <div class="btn-add">
+                <button type="button" class="b-remove-multiway"><span class="hide">다구간 삭제</span></button>
+            </div>
+        </li>
+    </ol>
+    <button type="button" class="b-add-multiway"><span>여정추가</span></button>
+    <div class="ui-search-panel ui-calendar">
+		<div class="uis-datepicker"></div>
+	</div><!-- //ui-calendar -->
+</div>
+<!-- //다구간 -->
+              </div>
+            </div>
+            <!-- //CALENDAR -->
+
+            <!-- CHECKBOX I -->
+            <div class="guide-box" id="checkbox1">
+              <h2 class="tit">CHECKBOX I <span>(Horizon Checkbox list)</span></h2>
+              <div class="gb-inner">
+<span class="chk-base">
+	<input type="checkbox" id="checkbox1-1" class="blind">
+	<label for="checkbox1-1">운전자 연령 25~70세</label> 
+</span>	
+<span class="chk-base">
+	<input type="checkbox" id="checkbox1-2" class="blind" checked>
+	<label for="checkbox1-2">운전자 연령</label> 
+</span>		
+<span class="chk-base">
+	<input type="checkbox" id="checkbox1-3" class="blind" checked disabled>
+	<label for="checkbox1-3">운전자</label> 
+</span>
+<span class="chk-base">
+	<input type="checkbox" id="checkbox1-3" class="blind" disabled>
+	<label for="checkbox1-3">운전자</label> 
+</span>
+              </div>
+            </div>
+            <!-- //CHECKBOX I -->
+
+            <!-- CHECKBOX II -->
+            <div class="guide-box" id="checkbox2">
+              <h2 class="tit">CHECKBOX II <span>(Vertical Checkbox list)</span></h2>
+              <div class="gb-inner">
+<ul class="chk-list">
+	<li>
+		<span class="chk-base">
+			<input type="checkbox" id="checkbox2-1" class="blind">
+			<label for="checkbox2-1">5성급</label> 
+		</span>	
+	</li>
+	<li>
+		<span class="chk-base">
+			<input type="checkbox" id="checkbox2-2" class="blind">
+			<label for="checkbox2-2">4성급</label> 
+		</span>	
+	</li>
+	<li>
+		<span class="chk-base">
+			<input type="checkbox" id="checkbox2-3" class="blind">
+			<label for="checkbox2-3">3성급</label> 
+		</span>	
+	</li>
+	<li>
+		<span class="chk-base">
+			<input type="checkbox" id="checkbox2-4" class="blind">
+			<label for="checkbox2-4">2성급</label> 
+		</span>	
+	</li>
+	<li>
+		<span class="chk-base">
+			<input type="checkbox" id="checkbox2-5" class="blind">
+			<label for="checkbox2-5">해당없음</label> 
+		</span>	
+	</li>
+</ul>
+              </div>
+            </div>
+            <!-- //CHECKBOX II -->
+
+            <!-- CHECKBOX III -->
+            <div class="guide-box" id="checkbox3">
+              <h2 class="tit">CHECKBOX III</h2>
+              <div class="gb-inner">
+<span class="chk-base tp2">
+<input type="checkbox" id="checkbox3-1" class="blind">
+<label for="checkbox3-1">운전자 연령 25~70세</label> 
+</span>	
+<span class="chk-base tp2">
+<input type="checkbox" id="checkbox3-2" class="blind" checked>
+<label for="checkbox3-2">운전자 연령</label> 
+</span>		
+<span class="chk-base tp2">
+<input type="checkbox" id="checkbox3-3" class="blind" checked disabled>
+<label for="checkbox3-3">운전자</label> 
+</span>
+<span class="chk-base tp2">
+<input type="checkbox" id="checkbox3-3" class="blind" disabled>
+<label for="checkbox3-3">운전자</label> 
+</span>
+              </div>
+            </div>
+            <!-- //CHECKBOX III -->
+
+            <!-- RADIO -->
+            <div class="guide-box" id="radio">
+              <h2 class="tit">RADIO</h2>
+              <div class="gb-inner">
+<span class="radio-base">
+<input type="radio" id="radio1-1" name="radiotest1" class="blind" checked>
+<label for="radio1-1">일반석</label> 
+</span>
+<span class="radio-base">
+<input type="radio" id="radio1-2" name="radiotest1" class="blind">
+<label for="radio1-2">비즈니스석</label> 
+</span>
+<span class="radio-base">
+<input type="radio" id="radio1-3" name="radiotest1" class="blind">
+<label for="radio1-3">일등석</label> 
+</span>
+
+<br><br>
+
+<span class="radio-base">
+<input type="radio" id="radio1-4" name="radiotest2" class="blind" checked disabled>
+<label for="radio1-4">돈방석</label> 
+</span>
+<span class="radio-base">
+<input type="radio" id="radio1-5" name="radiotest2" class="blind" disabled>
+<label for="radio1-5">돈방석</label> 
+</span>
+              </div>
+            </div>
+            <!-- //RADIO -->
+            
+            <!-- INPUT -->
+            <div class="guide-box" id="input">
+              <h2 class="tit">INPUT</h2>
+              <div class="gb-inner">
+<ul class="form-list">
+<li>
+  <input type="text" class="input-base" placeholder="이메일 주소 도는 휴대폰 번호">
+</li>
+<li>
+  <input type="text" class="input-base" placeholder="이메일 주소 도는 휴대폰 번호" value="01045111234" disabled>
+</li>
+</ul>
+              </div>
+            </div>
+            <!-- //INPUT -->
+          
+            <!-- SELECTBOX -->
+            <div class="guide-box" id="selectbox">
+              <h2 class="tit">SELECTBOX</h2>
+              <div class="gb-inner">
+<ul class="form-list">
+	<li>
+		<span class="select-base">
+			<select>
+				<option selected>문의 선택</option>
+				<option value="1">영문명 긴급 문의</option>
+				<option value="2">예약변경</option>
+				<option value="3">발권 및 티켓수령</option>
+				<option value="4">결제 및 영수증</option>
+				<option value="5">환불</option>
+				<option value="6">수하물/동승자</option>
+				<option value="7">공항/기내서비스</option>
+				<option value="8">테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트</option>
+			</select>
+		</span>
+	</li>
+	<li>
+		<span class="select-base">
+			<select>
+				<option selected>국가 선택</option>
+				<option value="1">한국</option>
+				<option value="2">중국</option>
+				<option value="3">미국</option>
+				<option value="4">일본</option>
+				<option value="5">독일</option>
+				<option value="6">프랑스</option>
+				<option value="7">브라질</option>
+				<option value="8">우크라이나</option>
+				<option value="9">나이지리아</option>
+				<option value="10">오스트리아</option>
+				<option value="11">이탈리아</option>
+				<option value="12">인도</option>
+				<option value="13">인도네시아</option>
+			</select>
+		</span>
+	</li>
+	<li>
+		<span class="select-base">
+			<select disabled>
+				<option value="1" checked>기아</option>
+				<option value="2">현대</option>
+				<option value="3">르노삼성</option>
+				<option value="4">GM대우</option>
+			</select>
+		</span>
+		
+	</li>
+</ul>
+              </div>
+            </div>
+            <!-- //SELECTBOX -->
+
+            <!-- COUNTER -->
+            <div class="guide-box" id="counter">
+              <h2 class="tit">COUNTER</h2>
+              <div class="gb-inner">
+<p>최소 1, 최대 10, 기본 2</p>
+<span class="num-ctn module" data-ctn='{"min":1, "max":10}'>
+	<a href="#" class="b-minus">-</a>
+	<input type="text" value="2" readonly class="active">
+	<a href="#" class="b-plus">+</a>
+</span>
+
+<br>
+<br>
+
+<p>최소 0, 최대 3, 기본 0</p>
+<span class="num-ctn module" data-ctn='{"min":0, "max":3}'>
+	<a href="#" class="b-minus">-</a>
+	<input type="text" value="0" readonly>
+	<a href="#" class="b-plus">+</a>
+</span>
+              </div>
+            </div>
+            <!-- //COUNTER -->
+            
+            <!-- LIST ITEM -->
+            <div class="guide-box wide" id="list-item">
+              <h2 class="tit">LIST ITEM</h2>
+              <div class="gb-inner bg">
+<ul class="list-item">
+  <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-01.jpg)"></div></a></li>
+  <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-02.jpg)"></div></a></li>
+  <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-03.jpg)"></div></a></li>
+  <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-04.jpg)"></div></a></li>
+</ul>			
+              </div>
+            </div>
+            <!-- //LIST ITEM -->
+
+            <!-- LIST ITEM SLICK -->
+            <div class="guide-box wide" id="list-item">
+              <h2 class="tit">LIST ITEM SLICK</h2>
+              <div class="gb-inner bg">
+<div class="list-slick">
+  <ul class="list-item">
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-01.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-02.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-03.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-04.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-01.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-02.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-03.jpg)"></div></a></li>
+    <li><a href="#"><div class="photo" style="background:url(/images/dummy/hotel-04.jpg)"></div></a></li>
+  </ul>
+</div>			
+              </div>
+            </div>
+            <!-- //LIST ITEM SLICK -->
+            
+            <!-- SCROLLBAR -->
+            <div class="guide-box" id="scrollbar">
+                <h2 class="tit">SCROLLBAR</h2>
+                <div class="gb-inner">
+<div class="o-scrollbar" style="max-height:150px;">
+  <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis impedit dolores itaque cupiditate quae consequatur iusto ipsam voluptatem, quos quo nemo aspernatur provident, eaque quidem similique veniam quia eum ea quod mollitia, repudiandae eligendi. Distinctio aliquid quaerat repellendus praesentium cupiditate! Necessitatibus quisquam veritatis similique soluta? Nulla reiciendis ab modi ex labore odit cupiditate praesentium placeat dicta delectus, veritatis perferendis tempora fuga voluptatem in quasi eos quam, distinctio officiis neque quis nobis ipsam ipsa. Ea accusantium non maiores dicta sapiente debitis blanditiis beatae nobis dolores repellat totam vero dolor voluptates rem quam est, dolore deserunt ipsa, qui repellendus! Laboriosam sed at, ex vitae dolores inventore veritatis exercitationem praesentium reiciendis tempore nihil? Molestiae autem quidem delectus distinctio vel voluptatum aspernatur quas repellendus, doloremque nulla, tenetur obcaecati exercitationem labore aliquid error dolores. Fugit quo iste aliquam laboriosam tempora nostrum tenetur incidunt veritatis possimus porro nulla laborum hic odio ipsum id deserunt, corporis error iure officiis similique provident corrupti nihil excepturi veniam! Cupiditate hic earum, repellendus, quis corporis sunt eligendi molestiae magnam corrupti ullam est quidem repellat non necessitatibus aut aliquam? Cupiditate nisi et dicta eligendi numquam rem exercitationem, laborum iure aperiam commodi repellendus recusandae unde sunt quidem voluptatum accusamus omnis delectus repudiandae in ipsam libero ipsa, quia quos vitae? Delectus impedit dolor minima natus voluptatibus tenetur non praesentium soluta, animi, magni dolorum perferendis sunt voluptate provident eos nam id. Natus tenetur iste optio minima harum illo repellendus, praesentium doloremque quaerat. Eveniet accusantium dolorum ullam facilis id fugit illo inventore quidem numquam cupiditate, itaque quaerat dolorem quam natus esse omnis modi nobis necessitatibus sed expedita perspiciatis cumque similique. Commodi officiis qui veritatis et nam eum aspernatur laboriosam laudantium accusamus quas atque, natus est, quos minus, recusandae animi nemo mollitia esse. Laudantium ut saepe, optio, magni quo veniam culpa incidunt inventore est, dolorum sit ullam!<br>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis impedit dolores itaque cupiditate quae consequatur iusto ipsam voluptatem, quos quo nemo aspernatur provident, eaque quidem similique veniam quia eum ea quod mollitia, repudiandae eligendi. Distinctio aliquid quaerat repellendus praesentium cupiditate! Necessitatibus quisquam veritatis similique soluta? Nulla reiciendis ab modi ex labore odit cupiditate praesentium placeat dicta delectus, veritatis perferendis tempora fuga voluptatem in quasi eos quam, distinctio officiis neque quis nobis ipsam ipsa. Ea accusantium non maiores dicta sapiente debitis blanditiis beatae nobis dolores repellat totam vero dolor voluptates rem quam est, dolore deserunt ipsa, qui repellendus! Laboriosam sed at, ex vitae dolores inventore veritatis exercitationem praesentium reiciendis tempore nihil? Molestiae autem quidem delectus distinctio vel voluptatum aspernatur quas repellendus, doloremque nulla, tenetur obcaecati exercitationem labore aliquid error dolores. Fugit quo iste aliquam laboriosam tempora nostrum tenetur incidunt veritatis possimus porro nulla laborum hic odio ipsum id deserunt, corporis error iure officiis similique provident corrupti nihil excepturi veniam! Cupiditate hic earum, repellendus, quis corporis sunt eligendi molestiae magnam corrupti ullam est quidem repellat non necessitatibus aut aliquam? Cupiditate nisi et dicta eligendi numquam rem exercitationem, laborum iure aperiam commodi repellendus recusandae unde sunt quidem voluptatum accusamus omnis delectus repudiandae in ipsam libero ipsa, quia quos vitae? Delectus impedit dolor minima natus voluptatibus tenetur non praesentium soluta, animi, magni dolorum perferendis sunt voluptate provident eos nam id. Natus tenetur iste optio minima harum illo repellendus, praesentium doloremque quaerat. Eveniet accusantium dolorum ullam facilis id fugit illo inventore quidem numquam cupiditate, itaque quaerat dolorem quam natus esse omnis modi nobis necessitatibus sed expedita perspiciatis cumque similique. Commodi officiis qui veritatis et nam eum aspernatur laboriosam laudantium accusamus quas atque, natus est, quos minus, recusandae animi nemo mollitia esse. Laudantium ut saepe, optio, magni quo veniam culpa incidunt inventore est, dolorum sit ullam!</div>
+</div>
+              </div>
+            </div>
+            <!-- //SCROLLBAR -->
+          </div>
+        </div>
+      </div>
+    </div><!-- //container -->
+  </div><!-- //wrapper -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script type="text/javascript" src="http://codemirror.net/lib/codemirror.js"></script>
+	<script type="text/javascript" src="http://codemirror.net/mode/javascript/javascript.js"></script>
+	<script type="text/javascript" src="http://codemirror.net/addon/selection/active-line.js"></script>
+	<script type="text/javascript" src="http://codemirror.net/mode/xml/xml.js"></script>
+	<script type="text/javascript" src="http://codemirror.net/addon/edit/matchbrackets.js"></script>
+	<script type="text/javascript" src="http://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+  <script type="text/javascript" src="/js/guide.js"></script>
+  <script type="text/javascript" src="js/commonModule.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> Ajax Popup Sample page </title>
+</head>
+<body>
+  <div class="popup-wrap">
+    <header class="p-header">
+      <h1>여행지 검색</h1>
+      <a href="#" class="b-close">닫기</a>
+    </header>
+    <div class="p-content">
+      <div class="p-places-area">
+          <div class="inner">
+              <input class="input" type="text" placeholder="목적지, 호텔명, 관광 명소를 검색해주세요.">
+              <i class="b-search black">검색</i>
+          </div>
+      </div><!-- //p-places-area -->
+      <div class="p-places-result">
+          <span class="label">최근검색</span>
+          <ul class="recent-list">
+              <li><a href="#">서울시, 한국</a></li>
+              <li><a href="#">서귀포시, 한국</a></li>
+          </ul>
+          <span class="label">추천도시</span>
+          <ul class="reccom-list">
+              <li>
+                  <dl>
+                      <dt>아시아 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">다낭</a></li>
+                              <li><a href="#">싱가포르</a></li>
+                              <li><a href="#">방콕</a></li>
+                              <li><a href="#">세부</a></li>
+                              <li><a href="#">코타키나발루</a></li>
+                              <li><a href="#">발리</a></li>
+                              <li><a href="#">푸켓</a></li>
+                              <li><a href="#">마닐라</a></li>
+                              <li><a href="#">파타야</a></li>
+                              <li><a href="#">보라카이</a></li>
+                              <li><a href="#">나트랑</a></li>
+                              <li><a href="#">호이안</a></li>
+                              <li><a href="#">호치민</a></li>
+                              <li><a href="#">하노이</a></li>
+                              <li><a href="#">쿠알라룸푸르</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+              <li>
+                  <dl>
+                      <dt>홍콩/중국 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">홍콩</a></li>
+                              <li><a href="#">타이베이</a></li>
+                              <li><a href="#">마카오</a></li>
+                              <li><a href="#">상해</a></li>
+                              <li><a href="#">북경</a></li>
+                              <li><a href="#">청도</a></li>
+                              <li><a href="#">광저우</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+              <li>
+                  <dl>
+                      <dt>일본 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">오키나와</a></li>
+                              <li><a href="#">오사카</a></li>
+                              <li><a href="#">도쿄</a></li>
+                              <li><a href="#">후쿠오카</a></li>
+                              <li><a href="#">삿포로</a></li>
+                              <li><a href="#">교토</a></li>
+                              <li><a href="#">유후인</a></li>
+                              <li><a href="#">나고야</a></li>
+                              <li><a href="#">노보리베츠</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+              <li>
+                  <dl>
+                      <dt>남태평양 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">괌</a></li>
+                              <li><a href="#">사이판</a></li>
+                              <li><a href="#">시드니</a></li>
+                              <li><a href="#">멜버른</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+              <li>
+                  <dl>
+                      <dt>유럽 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">파리</a></li>
+                              <li><a href="#">로마</a></li>
+                              <li><a href="#">런던</a></li>
+                              <li><a href="#">프라하</a></li>
+                              <li><a href="#">피렌체</a></li>
+                              <li><a href="#">바르셀로나</a></li>
+                              <li><a href="#">밀라노</a></li>
+                              <li><a href="#">베니스</a></li>
+                              <li><a href="#">부다페스트</a></li>
+                              <li><a href="#">비엔나</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+              <li>
+                  <dl>
+                      <dt>미주/캐나다 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">호놀룰루</a></li>
+                              <li><a href="#">마우이</a></li>
+                              <li><a href="#">라스베가스</a></li>
+                              <li><a href="#">뉴욕</a></li>
+                              <li><a href="#">샌프란시스코</a></li>
+                              <li><a href="#">시카고</a></li>
+                              <li><a href="#">로스앤젤레스</a></li>
+                              <li><a href="#">벤쿠버</a></li>
+                              <li><a href="#">토론토</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+              <li>
+                  <dl>
+                      <dt>국내 <i class="xi-angle-up"></i></dt>
+                      <dd>
+                          <ul class="list">
+                              <li><a href="#">제주</a></li>
+                              <li><a href="#">서울</a></li>
+                              <li><a href="#">부산</a></li>
+                              <li><a href="#">인천</a></li>
+                              <li><a href="#">강릉</a></li>
+                              <li><a href="#">속초</a></li>
+                              <li><a href="#">경주</a></li>
+                              <li><a href="#">평창</a></li>
+                              <li><a href="#">양양</a></li>
+                              <li><a href="#">여수</a></li>
+                              <li><a href="#">남해</a></li>
+                          </ul>
+                      </dd>
+                  </dl>
+              </li>
+          </ul>
+      </div><!-- //p-places-result -->
+    </div>
+  </div>
+</body>
+</html>
