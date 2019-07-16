@@ -138,5 +138,15 @@ textarea{
     text-indent: -9999px;
 }
 .mt10{
-    margin-top:10px !important;
+   margin-top:10px !important;
 }
+/* 2019-07-17 재영 추가 css text숨기기, 웹접근성 고려 참고 : https://yeoninim.tistory.com/m/36 */
+.hidden{
+   position: absolute !important;
+   width:1px;
+   height:1px;
+   overflow:hidden;
+   clip:rect(1px 1px 1px 1px);/* IE6, IE7*/
+   clip:rect(1px, 1px, 1px, 1px);
+}
+/* 2019-07-17 */
