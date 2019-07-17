@@ -20,7 +20,7 @@
 			display: block;
 			width: 16px;
 			height: 16px;
-			background: url($imgCommPath + "filter_sprite.png") 0 0 no-repeat;
+			background: url($img-comm-path + "filter_sprite.png") 0 0 no-repeat;
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -28,7 +28,7 @@
 		&.on {
 			color: #333;
 			&:before {
-				background: url($imgCommPath + "filter_sprite.png") 0 -16px no-repeat;
+				background: url($img-comm-path + "filter_sprite.png") 0 -16px no-repeat;
 			}
 		}
 	}
@@ -46,21 +46,21 @@
 			&:before {
 				width: 22px;
 				height: 22px;
-				background: url($imgCommPath + "uniform_sprite.png") 0 0 no-repeat;
+				background: url($img-comm-path + "uniform_sprite.png") 0 0 no-repeat;
 			}
 			&.on {
 				&:before {
-					background: url($imgCommPath + "uniform_sprite.png") 0 -22px no-repeat;
+					background: url($img-comm-path + "uniform_sprite.png") 0 -22px no-repeat;
 				}
 			}
 		}
 		&.disabled {
 			label {
 				&:before {
-					background: url($imgCommPath + "uniform_sprite.png") 0 -44px no-repeat;
+					background: url($img-comm-path + "uniform_sprite.png") 0 -44px no-repeat;
 				}
 				&.on:before{
-					background: url($imgCommPath + "uniform_sprite.png") 0 -66px no-repeat;
+					background: url($img-comm-path + "uniform_sprite.png") 0 -66px no-repeat;
 				}
 			}
 		}
@@ -94,14 +94,14 @@
 			display: block;
 			width: 22px;
 			height: 22px;
-			background: url($imgCommPath + "uniform_sprite.png") -23px 0 no-repeat;
+			background: url($img-comm-path + "uniform_sprite.png") -23px 0 no-repeat;
 			position: absolute;
 			top: 0;
 			left: 0;
 		}
 		&.on {
 			&:before {
-				background: url($imgCommPath + "uniform_sprite.png") -23px -22px no-repeat;
+				background: url($img-comm-path + "uniform_sprite.png") -23px -22px no-repeat;
 			}
 		}
 	}
@@ -111,10 +111,10 @@
 	pointer-events: none;
 	label {
 		&:before {
-			background: url($imgCommPath + "uniform_sprite.png") -23px -44px no-repeat;
+			background: url($img-comm-path + "uniform_sprite.png") -23px -44px no-repeat;
 		}
 		&.on:before {
-			background: url($imgCommPath + "uniform_sprite.png") -23px -66px no-repeat;
+			background: url($img-comm-path + "uniform_sprite.png") -23px -66px no-repeat;
 		}
 	}
 }
@@ -129,7 +129,7 @@
 .input-base {
 	width: 100%;
 	padding: 15px 14px 14px;
-	@include sdBorder(1px, #ddd);
+	@include sd-border(1px, #ddd);
 	color: #333;
 	font-size: 16px;
 	font-weight: 500;
@@ -137,7 +137,7 @@
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	&:focus {
-		@include sdBorder(2px, $tvColor);
+		@include sd-border(2px, $major-color);
 		padding: 14px 13px 13px;
 	}
 	&::-webkit-input-placeholder,
@@ -158,7 +158,7 @@
 	width: 414px;
 	height: 55px;
 	padding: 15px 14px 14px;
-	@include sdBorder(1px, #ddd);
+	@include sd-border(1px, #ddd);
 	box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	overflow: hidden;
@@ -183,7 +183,7 @@
 		width: 100%;
 	}
 	&.focus {
-		@include sdBorder(2px, $tvColor);
+		@include sd-border(2px, $major-color);
 		padding: 14px 13px 13px;
 	}
 	&.on {
@@ -220,7 +220,7 @@
 		right: 16px;
 		width: 17px;
 		height: 10px;
-		background: url($imgCommPath + 'btn_up.svg') 0 0 no-repeat, linear-gradient(transparent, transparent);
+		background: url($img-comm-path + 'btn_up.svg') 0 0 no-repeat, linear-gradient(transparent, transparent);
 		background-size: 17px 10px;
 		-webkit-background-size: 17px 10px;
 		&:after { 
@@ -260,81 +260,56 @@
 }
 .btn-base {
 	display: inline-block;
+	vertical-align: middle;
+	button, input {
+		background-color: transparent;
+		border: 0;
+		padding: 0;
+		cursor: pointer;
+		outline: none;
+		-webkit-appearance: none;
+	}
 	a, input, button {
-		display: inline-block;
-		font-size: 15px;
-		color: #fff;
-		background: #54bbab;
-		padding: 5px 13px;
-		border-radius: 16px;
+		display: block;
+		vertical-align: middle;
+		padding: 7px 13px;
+		font-size: 14px;
+		font-weight: 400;
+		transition: background .2s, color .2s;
 		min-width: 27px;
 		text-align: center;
 		width: auto;
-		font-weight: 400;
-		transition: background .2s, color .2s;
+		border-radius: 5px;
+	}
+	&.tp1 {
+		a, input, button {
+			background: #666;
+			color: #fff;
+			&:hover {
+				background: #333;
+			}
+		}
 	}
 	&.tp2 {
 		a, input, button {
 			font-size: 13px;
 			color: #333;
-			padding: 7px 13px;
 			background: #fff;
-			@include sdBorder(1px, #ccc);
-			border-radius: 5px;
+			@include sd-border(1px, #ccc);
+			&:hover {
+				background: #efefef;
+			}
 		}
 	}
 	&.tp3 {
-		display: block;
 		a, input, button {
-			font-size: 18px;
-			color: #fff;
-			padding: 10px 75px;
-			background: $tvColor;
-			border-radius: 5px;
-			width: 100%;
-			box-sizing: border-box;
-			@include sdBorder(1px, $tvColor);
-		}
-		&:hover {
-			a, input, button {
-				background: #fff;
-				color: $tvColor;
-				@include sdBorder(1px, $tvColor);
-			}
-		}
-		&.sm {
-			display: inline-block;
-			a, input, button {
-				width: auto;
-				padding: 7px 19px;
-				font-size: 16px;
-			}
-		}
-	}
-	&.tp4 {
-		position: relative;
-		display: inline-block;
-		>a.txt {
-			font-size: 14px;
+			font-size: 13px;
 			color: #333;
-			padding: 7px 35px 6px 15px;
 			background: #fff;
-			@include sdBorder(1px, #666);
-			border-radius: 5px;
-			width: 100%;
-			box-sizing: border-box;
-		}
-		>a.b-delete {
-			background: url($imgCommPath + 'btn_close.png') 50% 50% no-repeat;
-			width: 15px;
-			height: 15px;
-			background-size: auto 10px;
-			display: block;
-			position: absolute;
-			right: 10px;
-			top: 10px;
-			padding: 0;
-			min-width: initial;
+			@include sd-border(1px, #ccc);
+			&:hover {
+				background: #efefef;
+			}
 		}
 	}
 }
@@ -414,8 +389,8 @@
 .uis-datepicker .ui-datepicker-header a {cursor: pointer;}
 .uis-datepicker .ui-datepicker-header .ui-state-disabled {opacity:0.5;}
 .uis-datepicker .ui-datepicker-header .ui-datepicker-title span {font-size:18px;font-family:"NotoSansKR" !important;font-weight: 400;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-prev span {display:inline-block;width:14px;height:26px;text-indent:-9999px;background: url($imgCommPath + "icon-common-sec.png") -70px -304px no-repeat;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-next span {display:inline-block;width:14px;height:26px;text-indent:-9999px;background: url($imgCommPath + "icon-common-sec.png") -89px -304px no-repeat;}
+.uis-datepicker .ui-datepicker-header .ui-datepicker-prev span {display:inline-block;width:14px;height:26px;text-indent:-9999px;background: url($img-comm-path + "icon-common-sec.png") -70px -304px no-repeat;}
+.uis-datepicker .ui-datepicker-header .ui-datepicker-next span {display:inline-block;width:14px;height:26px;text-indent:-9999px;background: url($img-comm-path + "icon-common-sec.png") -89px -304px no-repeat;}
 .uis-datepicker .ui-datepicker-header .ui-datepicker-prev {position:absolute;top: 125px;left:-3px;}
 .uis-datepicker .ui-datepicker-header .ui-datepicker-next {position:absolute;top: 125px;right:-3px;}
 .uis-datepicker .ui-datepicker-calendar {width: 92%;margin: 0 auto;table-layout: fixed;position: relative;z-index: 10;}
@@ -486,6 +461,64 @@ border-left:0;
 .o-multiway .list-cont li.on {display: block;}
 .o-multiway .list-cont .air-md-2 .btn-add {display: none;}
 
+/* TOOLTIP */
+.tooltip {
+	transition: opacity 0.2s;
+	font-size: 10px;
+	font-weight: 500;
+	color: #fff;
+	background: #333;
+	border-radius: 5px;
+	padding: 10px;
+	max-width: 140px;
+	&:after { 
+		content: ''; 
+		position: absolute; 
+		width: 0; 
+		height: 0; 
+	}
+	&-bottom {
+		margin-top: 10px;	
+		&:after {
+			border-bottom: 10px solid #333;
+			top: -10px;
+		}
+	}
+	&-top {
+		margin-top: -10px;
+		&:after {
+			border-top: 10px solid #333;
+			bottom: -10px;
+		}
+	}
+	&-bottom:after, &-top:after {
+		border-left: 5px solid transparent; 
+		border-right: 5px solid transparent;
+		left: 50%;
+		margin-left: -5px;
+	}
+	&-left {
+		margin-left: -10px;
+		&:after {
+			border-left: 10px solid #333;
+			right: -10px;
+		}
+	}
+	&-right {
+		margin-left: 10px;
+		&:after {
+			border-right: 10px solid #333;
+			left: -10px;
+		}
+	}
+	&-left:after, &-right:after {
+		border-top: 5px solid transparent; 
+		border-bottom: 5px solid transparent;
+		top: 50%;
+		margin-top: -5px;
+	}
+}
+
 /* COUNTER */
 .num-ctn {
 	font-size: 0;
@@ -497,15 +530,15 @@ border-left:0;
 		vertical-align: middle;
 	}
 	.b-minus {
-		background: #eee url($imgCommPath + 'cnt-minus.svg') 50% 50% no-repeat;
+		background: #eee url($img-comm-path + 'cnt-minus.svg') 50% 50% no-repeat;
 		&:hover {
-			background: #0086c9 url($imgCommPath + 'cnt-minus-on.svg') 50% 50% no-repeat;
+			background: #0086c9 url($img-comm-path + 'cnt-minus-on.svg') 50% 50% no-repeat;
 		}
 	}
 	.b-plus {
-		background: #eee url($imgCommPath + 'cnt-plus.svg') 50% 50% no-repeat;
+		background: #eee url($img-comm-path + 'cnt-plus.svg') 50% 50% no-repeat;
 		&:hover {
-			background: #0086c9 url($imgCommPath + 'cnt-plus-on.svg') 50% 50% no-repeat;
+			background: #0086c9 url($img-comm-path + 'cnt-plus-on.svg') 50% 50% no-repeat;
 		}
 	}
 	input {
@@ -517,12 +550,14 @@ border-left:0;
 		vertical-align: middle;
 		text-align: center;
 		outline: none;
+		border: 0;
 		&.active {
 			color: #333;
 		}
 	}
 }
 .o-scrollbar {
+	padding-right: 15px;
 	.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical, .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical {
 		margin: 0;
 	}
@@ -582,7 +617,7 @@ border-left:0;
 	position: relative;
 	.list-item {
 		left: 0;
-		width: $minWidth;
+		width: $min-width;
 		li {
 			margin: 0 20px 0 0;
 		}
@@ -599,17 +634,17 @@ border-left:0;
 		transition: background .2s;
 	}
 	.slick-prev {
-		background: url($imgCommPath + 'arrow-b-l.svg') 0 0 no-repeat;
+		background: url($img-comm-path + 'arrow-b-l.svg') 0 0 no-repeat;
 		left: -40px;
 		&:hover {
-			background: url($imgCommPath + 'arrow-blue-l.svg') 0 0 no-repeat;
+			background: url($img-comm-path + 'arrow-blue-l.svg') 0 0 no-repeat;
 		}
 	}
 	.slick-next {
-		background: url($imgCommPath + 'arrow-b-r.svg') 0 0 no-repeat;
+		background: url($img-comm-path + 'arrow-b-r.svg') 0 0 no-repeat;
 		right: -40px;
 		&:hover {
-			background: url($imgCommPath + 'arrow-blue-r.svg') 0 0 no-repeat;
+			background: url($img-comm-path + 'arrow-blue-r.svg') 0 0 no-repeat;
 		}
 	}
 }

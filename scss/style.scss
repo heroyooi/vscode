@@ -15,7 +15,7 @@
     &:active, &:focus {
         width:100%;
         height:auto;
-        background:#d2182d;
+        background:$major-color;
         padding:5px 0;
     }
 }
@@ -56,4 +56,8 @@
             @include text-ellipis;
         }
     }
+}
+
+.ui-calendar {
+    width: 770px;
 }

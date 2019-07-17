@@ -3,6 +3,9 @@ $font-family: 'ZCOOL XiaoWei', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic',
 $img-path: '/images/';
 $img-comm-path: $img-path + 'common/';
 
+$major-color: #0085c9;
+$min-width: 1200px;
+
 // Mixin Group
 @mixin placeholder-init{
     font-family: $font-family;
@@ -28,17 +31,6 @@ $img-comm-path: $img-path + 'common/';
     word-wrap: break-word;
     overflow: hidden;
 }
-
-$tvColor: #0085c9;
-$minWidth: 1200px;
-
-$imgPath: "/images/";
-$imgCommPath: $imgPath + "common/";
-$imgContPath: $imgPath + "contents/";
-$imgDummyPath: $imgPath + "dummy/";
-
-
-// Mixin Group
-@mixin sdBorder($width, $color){
+@mixin sd-border($width, $color){
     border: $width solid $color;
 }

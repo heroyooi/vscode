@@ -177,7 +177,7 @@ var FE = window.FE || (function(){
       $(document).on('click', '.b-mfp-close', function (e) {
         e.preventDefault();
         $.magnificPopup.close();
-      });	
+      });
       
       _.find('.btn-popup-anim-1 a').magnificPopup({
         type: 'inline',
@@ -218,6 +218,12 @@ var FE = window.FE || (function(){
           }
         }
       });
+
+      //툴팁(공통)
+      _.find('.s-tip.bottom').tooltip({align: 'b'});
+      _.find('.s-tip.left').tooltip({align: 'l'});
+      _.find('.s-tip.right').tooltip({align: 'r'});
+      _.find('.s-tip.top').tooltip({align: 't'});
     },
     onSelectTxtDay: function($this, dateText, inst){
       /* 설명   : 통합검색 - 선택된 날짜 형식 ex)08월 07일 (화) dayNamesMin 옵션이 있어야함!
@@ -974,7 +980,6 @@ function commonSearch(){
 					$('.o-multiway [class*="md-"]').eq(i).find('.dates .area').addClass('on');
 					$('.o-multiway [class*="md-"]').eq(i).find('.dates .area').addClass('on');
 				}
-				console.log(txtDay)
 				$('.o-multiway [class*="md-"]').eq(i).find('.dates .chkin').html(txtDay);		
 				$('.o-multiway [class*="md-"]').eq(i).find('.dates .chkin').data('day', _mdDateArr[i]);		
 			}

@@ -22,7 +22,7 @@
   <script src="/js/jquery.magnific-popup.min.js"></script>
   <script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
   <script src="/js/jquery.selectric.min.js"></script>
-  <script src="/js/jquery.tooltip.min.js"></script>
+  <script src="/js/jquery.tooltip.js"></script>
   <script src="/js/slick.min.js"></script>
   <script src="/js/placeholder.min.js"></script>
 </head>
@@ -45,13 +45,13 @@
             <div class="guide-box" id="popup">
               <h2 class="tit">POPUP</h2>
               <div class="gb-inner">
-<span class="btn-popup btn-base tp2"><a href="#popup-modal">MODAL 팝업</a></span>
+<span class="btn-popup btn-base tp1"><a href="#popup-modal">MODAL 팝업</a></span>
 
-<span class="btn-popup-anim-1 btn-base tp2"><a href="#popup-anim-1">애니메이션 팝업 1 - BODY 고정</a></span>
+<span class="btn-popup-anim-1 btn-base tp1"><a href="#popup-anim-1">애니메이션 팝업 1 - BODY 고정</a></span>
 
-<span class="btn-popup-anim-2 btn-base tp2"><a href="#popup-anim-2">애니메이션 팝업 2 - BODY 움직임</a></span>
+<span class="btn-popup-anim-2 btn-base tp1"><a href="#popup-anim-2">애니메이션 팝업 2 - BODY 움직임</a></span>
 
-<span class="btn-popup-ajax btn-base tp2"><a href="popup.html">AJAX 팝업</a></span>
+<span class="btn-popup-ajax btn-base tp1"><a href="popup.html">AJAX 팝업</a></span>
 
 <div id="popup-modal" class="popup-wrap mfp-hide">
 <a href="#" class="b-mfp-close">팝업 닫기</a>
@@ -68,6 +68,29 @@
               </div>
             </div>
             <!-- //POPUP -->
+
+            <!-- BUTTONS -->
+            <div class="guide-box" id="buttons">
+              <h2 class="tit">BUTTONS</h2>
+              <div class="gb-inner">
+<div class="btns-wrap">
+  <span class="btn-base tp1"><a href="#">버튼1</a></span>
+  <span class="btn-base tp1"><a href="#">버튼2</a></span>
+  <span class="btn-base tp1"><a href="#">버튼3</a></span>
+</div>
+<div class="btns-wrap center">
+  <span class="btn-base tp2"><a href="#">버튼1</a></span>
+  <span class="btn-base tp2"><a href="#">버튼2</a></span>
+  <span class="btn-base tp2"><a href="#">버튼3</a></span>
+</div>
+<div class="btns-wrap right">
+  <span class="btn-base tp1"><a href="#">버튼1</a></span>
+  <span class="btn-base tp2"><a href="#">버튼2</a></span>
+  <span class="btn-base tp3"><a href="#">버튼3</a></span>
+</div>
+              </div>
+            </div>
+            <!-- //BUTTONS -->
 
             <!-- CALENDAR -->
             <div class="guide-box" id="calendar">
@@ -458,6 +481,22 @@
               </div>
             </div>
             <!-- //SCROLLBAR -->
+            
+            <!-- TOOLTIP -->
+            <div class="guide-box" id="tooltip">
+              <h2 class="tit">TOOLTIP</h2>
+              <div class="gb-inner">
+<span class="s-tip bottom" original-title="툴팁 샘플 입니다.">?</span>
+<span class="s-tip left" original-title="툴팁 샘플 입니다.">?</span>
+<span class="s-tip right" original-title="툴팁 샘플 입니다.">?</span>
+<span class="s-tip top" original-title="툴팁 샘플 입니다.">?</span>
+
+<br><br>
+
+<span class="s-tip bottom" title="<span>확정 : 예약과 동시에 바로 확정되는 객실입니다.<br>대기 : 예약담당자 확인 후 확정여부를 안내해드립니다.<br>선택 후 확인 : 예약/결제하기 시 '베드타입' 선택 후<br>최종 상태를 안내해 드립니다.</span>">?</span>
+              </div>
+            </div>
+            <!-- //TOOLTIP -->
           </div>
         </div>
       </div>

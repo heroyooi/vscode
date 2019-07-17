@@ -1,11 +1,11 @@
 @import "config";
 
 #wrap.guide-wrap {
-	min-width: $minWidth;
+	min-width: $min-width;
 }
 #content.guide-sec {
 	margin-top: 0;
-	max-width: $minWidth;
+	max-width: $min-width;
 	width: 96%;
 	padding-bottom: 60px;
 }
@@ -36,22 +36,22 @@
 		}
 		.btn-base {
 			a {
-				color: $tvColor;
+				color: $major-color;
 				background: #ffffff;
-				@include sdBorder(1px, #0085c9);
+				@include sd-border(1px, #0085c9);
 				padding: 4px 12px;
 				border-radius: 5px;
 				box-sizing: border-box;
 				&:hover {
 					color: #ffffff;
-					background: $tvColor;
+					background: $major-color;
 				}
 			}
 		}
 		.btn-base.on {
 			a {
 				color: #ffffff;
-				background: $tvColor;
+				background: $major-color;
 			}
 		}
 	}
@@ -76,9 +76,9 @@
 		margin-top: 60px;
 		position: relative;
 		&.wide {
-			width: $minWidth + 20px;
+			width: $min-width + 20px;
 			left: 50%;
-			margin-left: -($minWidth + 20px)/2
+			margin-left: -($min-width + 20px)/2
 		}
 		.gb-inner.bg {
 			background: #f2f2f2;
@@ -211,7 +211,7 @@
 	}
 	li.on {
 		a {
-			color: $tvColor;
+			color: $major-color;
 			text-decoration: underline;
 		}
 	}
@@ -237,7 +237,7 @@
 		width: 10px;
 		height: 10px;
 		overflow: hidden;
-		background: $tvColor;
+		background: $major-color;
 		cursor: pointer;
 		transition: width .3s, height .3s, background .2s;
 		border-radius: 10px;
@@ -259,7 +259,7 @@
 .code-btn {
 	position: absolute;
 	right: 10px;
-	top: 5px;
+	top: 0;
 }
 .gb-inner.half+.code-btn {
 	right: 600px;
@@ -269,6 +269,7 @@
 		background: #000;
 		border-radius: 3px;
 		font-size: 12px;
+		color: #fff;
 	}
 }
 .btn-base {
@@ -318,7 +319,7 @@
 			&:nth-child(7) {
 				width: 16%;
 				span {
-					color: $tvColor;
+					color: $major-color;
 				}
 			}
 			&:last-child {
@@ -346,15 +347,15 @@
 				border-radius: 3px;
 			}
 			.complete {
-				background: $tvColor;
-				@include sdBorder(1px, #0085c9);
+				background: $major-color;
+				@include sd-border(1px, #0085c9);
 				color: #fff;
 				font-weight: 500;
 				text-align: center;
 				transition: background .2s, color .2s;
 				&:hover {
 					background: #fff;
-					color: $tvColor;
+					color: $major-color;
 				}
 			}
 		}
@@ -367,16 +368,9 @@
 		& > li:last-child {
 			padding: 0;
 		}
-	}
-	
+	}	
 }
 
-.search-wrap {
-	.search-box {
-		position: relative;
-		width: 100%;
-		.ui-calendar {
-			left: 0;
-		}
-	}
+.s-tip {
+	margin-left: 10px;
 }
