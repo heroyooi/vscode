@@ -497,9 +497,108 @@
               </div>
             </div>
             <!-- //TOOLTIP -->
-          </div>
-        </div>
-      </div>
+            <div class="guide-menu">
+              <h2>GUIDE MENU <span></span></h2>
+              <div class="guide-sch">
+                <input type="text" class="input-base" placeholder="검색어를 입력하세요." v-model="msgKeyword" @keyup="searchMenu">
+              </div>
+              <div class="inner ui-customscrollbar">
+                <ul></ul>
+              </div>
+              <span class="btn-base"><a href="#" class="b-toggle">접기</a></span>
+              <span class="btn-base"><a href="#" class="b-mini">최소화</a></span>
+            </div><!-- //guide-menu -->
+          </div><!-- GUIDE UI -->
+          <div id="guide-map">
+            <ul class="coding-map">
+              <li>
+                <ul class="row">
+                  <li>
+                    <span class="label">depth 1</span>
+                  </li>
+                  <li>
+                    <span class="label">depth 2</span>
+                  </li>
+                  <li>
+                    <span class="label">depth 3</span>
+                  </li>
+                  <li>
+                    <span class="label">depth 4</span>
+                  </li>
+                  <li>
+                    <span class="label">depth 5</span>
+                  </li>
+                  <li>
+                    <span class="label">depth 6</span>
+                  </li>
+                  <li>
+                    <span class="label">페이지ID</span>
+                  </li>
+                  <li>
+                    <span class="label">상태 &amp; 링크</span>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="row">
+                  <li class="nbd">
+                    <span>호텔섹션메인</span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span>tv_p_hotel_main</span>
+                  </li>
+                  <li>
+                    <a class="complete" href="#" target="_blank">완료</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul class="row">
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span>검색결과(리스트)</span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span></span>
+                  </li>
+                  <li>
+                    <span>tv_p_hotel_list</span>
+                  </li>
+                  <li>
+                    <a class="complete" href="#" target="_blank">작업중</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- GUIDE MAP -->
+        </div><!-- //guide-panel -->
+      </div><!-- //content -->
     </div><!-- //container -->
   </div><!-- //wrapper -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>

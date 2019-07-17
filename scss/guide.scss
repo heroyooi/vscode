@@ -219,6 +219,9 @@
 		display: inline-block;
 		margin: 10px auto 0;
 	}
+	.mCSB_outside+.mCS-minimal-dark.mCSB_scrollTools_vertical, .mCSB_outside+.mCS-minimal.mCSB_scrollTools_vertical {
+		margin: 0;
+	}
 	.mCSB_scrollTools {
 		opacity: 1 !important;
 		width: 6px;
@@ -273,17 +276,12 @@
 	}
 }
 .btn-base {
-	a.b-toggle {
+	a.b-toggle, a.b-mini {
 		background: #000;
 		border-radius: 3px;
 		font-size: 12px;
 		padding: 5px 24px;
-	}
-	a.b-mini {
-		background: #000;
-		border-radius: 3px;
-		font-size: 12px;
-		padding: 5px 24px;
+		color: #fff;
 	}
 }
 .guide-panel {
