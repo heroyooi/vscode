@@ -4,6 +4,7 @@ $img-path: '/images/';
 $img-comm-path: $img-path + 'common/';
 
 $major-color: #0085c9;
+$fullSize : 100%;
 $min-width: 1200px;
 
 // Mixin Group
@@ -39,3 +40,8 @@ $min-width: 1200px;
 @mixin sd-border($width, $color){
     border: $width solid $color;
 }
+
+//Function Froup
+@function lth-size($lth : 1){
+    @return $fullSize / $lth;
+}  
