@@ -380,23 +380,90 @@
 
 /* CALENDAR */
 /* 검색 UI 팝업 - datepicker */
-.uis-datepicker .ui-datepicker {margin:0;padding:25px 30px 30px 30px;border:0;}
-.uis-datepicker .ui-datepicker * {margin:0;padding:0;border:0;background:none;text-align:center;color:#000;font-weight: bold;}
-.uis-datepicker .ui-datepicker-multi {width: 100% !important;}
-.uis-datepicker .ui-datepicker-multi:after {content: '';display: block;clear:both;}
-.uis-datepicker .ui-datepicker-multi-2 .ui-datepicker-group {float: left;width: 50% !important;}
-.uis-datepicker .ui-datepicker-header {padding-bottom:25px;background-color: #fff;position: relative;z-index: 10;}
-.uis-datepicker .ui-datepicker-header a {cursor: pointer;}
-.uis-datepicker .ui-datepicker-header .ui-state-disabled {opacity:0.5;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-title span {font-size:18px;font-family:"NotoSansKR" !important;font-weight: 400;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-prev span {display:inline-block;width:14px;height:26px;text-indent:-9999px;background: url($img-comm-path + "icon-common-sec.png") -70px -304px no-repeat;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-next span {display:inline-block;width:14px;height:26px;text-indent:-9999px;background: url($img-comm-path + "icon-common-sec.png") -89px -304px no-repeat;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-prev {position:absolute;top: 125px;left:-3px;}
-.uis-datepicker .ui-datepicker-header .ui-datepicker-next {position:absolute;top: 125px;right:-3px;}
-.uis-datepicker .ui-datepicker-calendar {width: 92%;margin: 0 auto;table-layout: fixed;position: relative;z-index: 10;}
-.uis-datepicker .ui-datepicker-calendar thead tr th, .uis-datepicker .ui-datepicker-calendar tbody tr td {text-align: center;position: relative;}
-.uis-datepicker .ui-datepicker-calendar thead tr th span {display:inline-block;font-size:12px;width: 40px;height:auto;padding-bottom: 10px;text-indent:0;}
-.uis-datepicker .ui-datepicker-calendar tbody tr td {vertical-align: middle;}
+.uis-datepicker .ui-datepicker {
+	margin:0;
+	padding:25px 30px 30px 30px;
+	border:0;
+	* {
+		margin:0;
+		padding:0;
+		border:0;
+		background:none;
+		text-align:center;
+		color:#000;
+		font-weight: bold;
+	}
+	&-multi {
+		width: 100% !important;
+		&:after {
+			content: '';display: block;clear:both;
+		}
+	}
+	&-multi-2 {
+		.ui-datepicker-group {
+			float: left;
+			width: 50% !important;
+		}
+	}
+	&-header {
+		padding-bottom:25px;
+		background-color: #fff;
+		position: relative;
+		z-index: 10;
+		a {
+			cursor: pointer;
+		}
+		.ui-state-disabled {
+			opacity:0.5;
+		}
+		.ui-datepicker-title span {
+			font-size:18px;
+			font-weight: 400;
+		}
+		.ui-datepicker-prev,
+		.ui-datepicker-next {
+			position:absolute;
+			top: 125px;
+		}
+		.ui-datepicker-prev {left:-3px;}
+		.ui-datepicker-next {right:-3px;}
+		.ui-datepicker-prev span,
+		.ui-datepicker-next span {
+			display:inline-block;
+			width:14px;
+			height:26px;
+			text-indent:-9999px;
+		}
+		.ui-datepicker-prev span {
+			background: url($img-comm-path + "icon-common-sec.png") -70px -304px no-repeat;
+		}
+		.ui-datepicker-next span {
+			background: url($img-comm-path + "icon-common-sec.png") -89px -304px no-repeat;
+		}
+	}
+	&-calendar {
+		width: 92%;
+		margin: 0 auto;
+		table-layout: fixed;
+		position: relative;
+		z-index: 10;
+		thead tr th, tbody tr td {
+			text-align: center;
+			position: relative;
+		}
+		thead tr th span {
+			display:inline-block;
+			font-size:12px;
+			width: 40px;
+			height:auto;
+			padding-bottom: 10px;
+			text-indent:0;
+		}
+		tbody tr td {
+			vertical-align: middle;
+		}
+	}
+}
 .uis-datepicker .ui-datepicker-calendar thead tr th .Sunday,
 .uis-datepicker .ui-datepicker-calendar tbody tr td.date-sunday *,
 .uis-datepicker .ui-datepicker-calendar tbody tr td.date-holiday * {color: #ff3333 !important;}
