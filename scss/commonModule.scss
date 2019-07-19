@@ -459,7 +459,42 @@ border-left:0;
 .uis-datepicker .dp-highlight-md.dp-first.ui-datepicker-today:before {font-size:0 !important;left: 10px !important;bottom: 0 !important;}
 .o-multiway .list-cont li {display: none;margin-bottom: 12px;}
 .o-multiway .list-cont li.on {display: block;}
-.o-multiway .list-cont .air-md-2 .btn-add {display: none;}
+.o-multiway .list-cont .md-2 .btn-add {display: none;}
+
+.b-add-multiway {
+	&.disabled {
+
+	}
+}
+.ui-calendar {
+	background: #fefefe;
+	border:1px solid #ddd;
+	width: 770px;
+	z-index: 10;
+	@include radius(6px);
+	@at-root .search-box.o-multiway {
+			position: relative;
+			.ui-calendar {
+					position: absolute;
+					left: 0;
+					top: 0;
+					transition: opacity .2s, visibility .2s;
+					box-shadow: 0 0 5px 0 rgba(0,0,0,0.3);
+					opacity: 0;
+					visibility: hidden;
+					&.on {
+							opacity: 1;
+					visibility: visible;
+					}
+			}
+			.list-cont li {
+					position: relative;
+					padding: 10px;
+					@include sd-border(1px, #ddd);
+					@include radius;
+			}
+	}
+}
 
 /* TOOLTIP */
 .tooltip {

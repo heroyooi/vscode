@@ -75,12 +75,22 @@
             margin-top: 10px;
             width: 150px;
             background-color: #f1f1f1;
-            @include radius(3px);
+            @include radius;
             @include text-ellipis;
         }
     }
 }
 
-.ui-calendar {
-    width: 770px;
+.search-wrap {
+    h3 {
+        padding: 10px;
+        margin-top: 30px;
+        font-size: 20px;
+        color: #000;
+        background: #eee;
+        @include radius;
+        &:first-child {
+            margin-top: 0;
+        }
+    }
 }

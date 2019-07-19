@@ -107,8 +107,8 @@
 					$this.find('input').addClass('active');
 				}
 				if(c <= min){
-					c = min;
-					$this.find('input.active').removeClass('active');
+          c = min;
+          if(c == 0) $this.find('input.active').removeClass('active');
 					$this.find('.b-minus').addClass('disabled');
 				}else if(c > min){
 					$this.find('.b-minus.disabled').removeClass('disabled');
@@ -227,7 +227,7 @@ var FE = window.FE || (function(){
     },
     onSelectTxtDay: function($this, dateText, inst){
       /* 설명   : 통합검색 - 선택된 날짜 형식 ex)08월 07일 (화) dayNamesMin 옵션이 있어야함!
-          사용처 : jQuery UI datepicker : onSelect 내부 */
+         사용처 : jQuery UI datepicker : onSelect 내부 */
       var sDate = $.datepicker.parseDate($this.datepicker('option', 'dateFormat'), dateText),
           month = (sDate.getMonth()+1) < 10 ? '0' + (sDate.getMonth()+1)  : sDate.getMonth()+1,
           day = sDate.getDate() < 10 ? '0' + sDate.getDate()  : sDate.getDate(),
@@ -237,9 +237,9 @@ var FE = window.FE || (function(){
     },
     jqdHolidayMark: function(date){
       /* 설명   : jQuery Ui datepicker 주말, 휴일 표시
-          사용처 : 필요시 호출 ex) var result = FE.jqdHolidayMark(date); */
+         사용처 : 필요시 호출 ex) var result = FE.jqdHolidayMark(date); */
         
-          //휴무일
+        //휴무일
         var result;
         var holiday = holidays[$.datepicker.formatDate("mmdd",date )];
         if(!holiday){
@@ -302,7 +302,7 @@ var FE = window.FE || (function(){
     },
     beforeShowDayMarkMD: function(date, $dateArr){
       /* 설명   : 통합검색 - 다구간 스타일 구현
-          사용처 : jQuery UI datepicker : beforeShowDay 내부 */
+         사용처 : jQuery UI datepicker : beforeShowDay 내부 */
 
       var result = FE.jqdHolidayMark(date);
       
@@ -328,7 +328,7 @@ var FE = window.FE || (function(){
     },
     roomManagement: function(){
       /* 설명   : 통합검색 - 객실 수, 인원 필터
-          사용처 : 퀵서치 전역으로 실행 */
+         사용처 : 퀵서치 전역으로 실행 */
       var _roomNum = 0;
       var roomArr = [];
       var minRoom = 1; //객실 수 (최소)
@@ -344,7 +344,7 @@ var FE = window.FE || (function(){
       var totalAdultNum; //전체 성인 수
       var totalChildNum; //전체 아동 수
       var totalResult = null;
-      var dataResult = function(data){ console.log(data) }; //데이터 (json)
+      var dataResult = function(data){ console.log('Travelers Data : ', data) }; //데이터 (json)
 
       var $rooms = $('.ui-travelers .rooms-wrap');
       //var $result = $rooms.find('.rooms-result');
@@ -457,8 +457,8 @@ var FE = window.FE || (function(){
           roomUI.Event(obj);
         },
         Event: function(obj){
-                //성인 +
-          obj.ui.find('.adultArea .b-plus').on('click', function(){
+          //성인 +
+          obj.ui.find('.adultArea .b-plus').on('click', function(e){
             var num = obj.adultNum;
             num++;
             if(num <= minAdult){
@@ -470,10 +470,11 @@ var FE = window.FE || (function(){
             obj.adultNum = num;
             obj.ui.find('.adultArea input').val(parseInt(num));
             roomUI.Data();
-            });
+            e.preventDefault();
+          });
       
-            //성인 -
-            obj.ui.find('.adultArea .b-minus').on('click', function(){
+          //성인 -
+          obj.ui.find('.adultArea .b-minus').on('click', function(e){
             var num = obj.adultNum;
             num--;
             if(num <= minAdult || num >= maxAdult){
@@ -485,10 +486,11 @@ var FE = window.FE || (function(){
             obj.adultNum = num;
             obj.ui.find('.adultArea input').val(parseInt(num));
             roomUI.Data();
-            });
+            e.preventDefault();
+          });
       
-            //아동 +
-            obj.ui.find('.childArea .b-plus').on('click', function(){
+          //아동 +
+          obj.ui.find('.childArea .b-plus').on('click', function(e){
             var num = obj.childNum;
             num++;
             if(num <= minChild){
@@ -501,10 +503,11 @@ var FE = window.FE || (function(){
             obj.ui.find('.childArea input').val(parseInt(num));
             roomUI.childAge(obj, num);
             roomUI.Data();
-            });
+            e.preventDefault();
+          });
       
-            //아동 -
-            obj.ui.find('.childArea .b-minus').on('click', function(){
+          //아동 -
+          obj.ui.find('.childArea .b-minus').on('click', function(e){
             var num = obj.childNum;
             num--;
             if(num <= minChild || num >= maxChild){
@@ -520,10 +523,11 @@ var FE = window.FE || (function(){
             obj.ui.find('.age-remote li.item:last-child').remove();
             if(num <= 0) obj.ui.find('.age-remote').remove();
             roomUI.Data();
-            });
+            e.preventDefault();
+          });
       
-            //객실 선택
-            obj.ui.find('.room').on('click', function(e){
+          //객실 선택
+          obj.ui.find('.room').on('click', function(e){
             if(!$(this).closest('.room-unit').hasClass('active')){
               $(this).closest('.room-unit').addClass('active');
             }else{
@@ -532,10 +536,10 @@ var FE = window.FE || (function(){
             $(this).closest('.room-unit').siblings().removeClass('active');
             
             e.preventDefault();
-            });
+          });
       
-            //객실 삭제
-            if(_roomNum > 1){
+          //객실 삭제
+          if(_roomNum > 1){
             obj.ui.find('.b-delete').on('click', function(e){
               roomArr[obj.roomNum].ui.find('.b-minus, .b-plus').off('click');
               roomArr.splice(obj.roomNum, 1);
@@ -552,16 +556,16 @@ var FE = window.FE || (function(){
               roomUI.Data();
               e.preventDefault();
             });
-            }
+          }
 
-            if(obj.childOld.length > 0){
-              for(i in obj.childOld){
-                roomUI.childAge(obj, parseInt(i)+1);
-              }
+          if(obj.childOld.length > 0){
+            for(i in obj.childOld){
+              roomUI.childAge(obj, parseInt(i)+1);
             }
+          }
 
-            roomArr.push(obj);
-            roomUI.Change(roomArr);
+          roomArr.push(obj);
+          roomUI.Change(roomArr);
         },
         Change: function(arr){
                 for(var i in arr){

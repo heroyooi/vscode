@@ -212,7 +212,7 @@
             </div>
         </li>
     </ol>
-    <button type="button" class="b-add-multiway"><span>여정추가</span></button>
+    <button type="button" class="b-add-multiway btn-base tp1"><span>여정추가</span></button>
     <div class="ui-search-panel ui-calendar">
 		<div class="uis-datepicker"></div>
 	</div><!-- //ui-calendar -->
@@ -221,6 +221,47 @@
               </div>
             </div>
             <!-- //CALENDAR -->
+
+            <!-- TRAVELERS -->
+            <div class="guide-box" id="travelers">
+              <h2 class="tit">travelers <span>(객실 수, 인원)</span></h2>
+              <div class="gb-inner search-wrap">
+                <div class="search-box">
+                  <div class="cont travelers">
+                    <a href="#" class="area" data-panel="travelers"><!-- 객실수·인원 데이터 존재할 경우 class="on" 추가 -->
+                      <span class="label">객실수, 인원</span>
+                      <span class="input">
+                        <span
+                          class="rooms"
+                          data-travelers='{
+                            "room0": {"adult": 2, "child": null}
+                          }'></span>
+      
+                        <!-- 객실수·인원 데이터가 존재할 경우 -->
+                        <!-- <span 
+                          class="rooms"
+                          data-travelers='{
+                            "room0": {"adult": 2, "child": null},
+                            "room1": {"adult": 3, "child": [9,6]},
+                            "room2": {"adult": 1, "child": [6,5,2]}
+                          }'
+                        ></span> -->
+                      </span>
+                    </a>
+                  </div>
+                  <div class="ui-search-panel ui-travelers">
+                    <div class="rooms-wrap">
+                      <div class="rooms-remote"></div>
+                      <div class="btns-wrap">
+                        <span class="btn-base tp3 b-add"><a href="#none" >객실추가</a></span>
+                        <a href="javascript:void(0);" class="btn-close"></a>
+                      </div>
+                    </div>
+                  </div><!-- //ui-travelers -->
+                </div>                                  
+              </div>
+            </div>
+            <!-- //TRAVELERS -->
 
             <!-- CHECKBOX I -->
             <div class="guide-box" id="checkbox1">
@@ -452,7 +493,7 @@
             <!-- //LIST ITEM -->
 
             <!-- LIST ITEM SLICK -->
-            <div class="guide-box wide" id="list-item">
+            <div class="guide-box wide" id="list-item-slick">
               <h2 class="tit">LIST ITEM SLICK</h2>
               <div class="gb-inner bg">
 <div class="list-slick">
