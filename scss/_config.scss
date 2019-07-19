@@ -27,7 +27,7 @@ $min-width: 1200px;
     line-height: $line-height;
     @if($static){
         height: $height;
-    }else{
+    } else {
         max-height: $height;
     }
     text-overflow: ellipsis;
@@ -40,8 +40,11 @@ $min-width: 1200px;
 @mixin sd-border($width, $color){
     border: $width solid $color;
 }
+@mixin radius($radius: 3px){
+    border-radius: $radius;
+}
 
-//Function Froup
-@function lth-size($lth : 1){
+//Function Group
+@function lth-size($lth: 1){
     @return $fullSize / $lth;
-}  
+}

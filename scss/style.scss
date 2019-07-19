@@ -28,9 +28,32 @@
             font-size: 32px;
             font-weight: 700;
             color: #000;
-            // background: url($img-comm-path + "logo.svg") 0 0 no-repeat;
         }
-        
+    }
+}
+
+#gnb {
+    width: 700px;
+    &:after {
+        @include after;
+    }
+    li {
+        float: left;
+        width: lth-size(6);
+        a {
+            display: block;
+            padding: 10px 0;
+            font-size: 14px;
+            color: #000;
+            text-align: center;
+            transition: background .3s, color .3s;
+            @include sd-border(1px, #ddd);
+            @include radius(5px);
+            &:hover {
+                background: #000;
+                color: #fff;
+            }
+        }
     }
 }
 
@@ -41,18 +64,18 @@
     .test-text {
         margin-top: 10px;
         width: 150px;
-        background: gold;
+        background-color: #eee;
         font-size: 14px;
         font-weight: 500;
         color: #333;
-        border-radius: 3px;
         overflow: hidden;
+        @include radius;
         @include text-multi-line(2, 20px, 40px, true);
         &2 {
             margin-top: 10px;
             width: 150px;
-            background: aqua;
-            border-radius: 3px;
+            background-color: #f1f1f1;
+            @include radius(3px);
             @include text-ellipis;
         }
     }
