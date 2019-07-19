@@ -68,11 +68,11 @@ $(function(){
             if($uiList.css('display')=='block'){
                 $uiList.stop().slideUp(300);
                 $(this).text('열기');
-                $(this).closest('.btn-base').css('margin-top', 0);
+                $uiMenu.find('.btn-base').css('margin-top', 0);
             }else{
                 $uiList.stop().slideDown(300);
                 $(this).text('접기');
-                $(this).closest('.btn-base').css('margin-top', '10px');
+                $uiMenu.find('.btn-base').css('margin-top', '10px');
             }    
         }
         if($(this).hasClass('b-mini')){
