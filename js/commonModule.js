@@ -239,34 +239,34 @@ var FE = window.FE || (function(){
       /* 설명   : jQuery Ui datepicker 주말, 휴일 표시
          사용처 : 필요시 호출 ex) var result = FE.jqdHolidayMark(date); */
         
-        //휴무일
-        var result;
-        var holiday = holidays[$.datepicker.formatDate("mmdd",date )];
-        if(!holiday){
-          holiday = holidays[$.datepicker.formatDate("yymmdd",date )];
+      //휴무일
+      var result;
+      var holiday = holidays[$.datepicker.formatDate("mmdd",date )];
+      if(!holiday){
+        holiday = holidays[$.datepicker.formatDate("yymmdd",date )];
+      }
+      var thisYear = $.datepicker.formatDate("yy", date);
+      if (holiday) {
+        if(thisYear == holiday.year || holiday.year == "") {
+          result =  [true, "date-holiday", holiday.title];
         }
-        var thisYear = $.datepicker.formatDate("yy", date);
-        if (holiday) {
-          if(thisYear == holiday.year || holiday.year == "") {
-            result =  [true, "date-holiday", holiday.title];
-          }
-        }
+      }
 
-        //주말
-        if(!result) {
-          switch (date.getDay()) {
-            /*case 0:
-              result = [true, "date-sunday"];
-              break;
-            case 6:
-              result = [true, "date-saturday"];
-              break;*/
-            default:
-              result = [true, ""];
-              break;
-          }
+      //주말
+      if(!result) {
+        switch (date.getDay()) {
+          /*case 0:
+            result = [true, "date-sunday"];
+            break;
+          case 6:
+            result = [true, "date-saturday"];
+            break;*/
+          default:
+            result = [true, ""];
+            break;
         }
-        return result;
+      }
+      return result;
     },
     beforeShowDayMark: function(date, $date1, $date2){
       /* 설명   : 통합검색 - 출발, 도착지 스타일 구현
@@ -288,8 +288,7 @@ var FE = window.FE || (function(){
           }else{
             result = [true, "dp-highlight", $.datepicker.formatDate('yy/mm/dd', date1)];
           }
-        }
-        else if(date2){
+        }else if(date2){
           if(date.getTime() == date2.getTime()){
             result = [true, "dp-highlight dp-end", $.datepicker.formatDate('yy/mm/dd', date2)];
           }else if(date.getTime() > date1.getTime() && date.getTime() < date2.getTime()){
@@ -568,7 +567,7 @@ var FE = window.FE || (function(){
           roomUI.Change(roomArr);
         },
         Change: function(arr){
-                for(var i in arr){
+          for(var i in arr){
             var obj = arr[i];
             obj.roomNum = parseInt(i);
             obj.ui.find('.room span').text(obj.roomNum+1);
@@ -593,16 +592,16 @@ var FE = window.FE || (function(){
           if(defaultChildOld > 0){
             ageHTML +=        '<span class="value active"></span>';
           }else{
-              ageHTML +=        '<span class="value"></span>';
+            ageHTML +=        '<span class="value"></span>';
           }
             
             ageHTML +=        '<select>';
             ageHTML +=          '<option value="0">나이</option>';
           for(var i=minChildOld; i<=maxChildOld; i++){
             if(i == defaultChildOld){
-            ageHTML +=        '<option value='+i+' selected>만 '+i+'세</option>';
+            ageHTML +=          '<option value='+i+' selected>만 '+i+'세</option>';
             }else{
-            ageHTML +=        '<option value='+i+'>만 '+i+'세</option>';
+            ageHTML +=          '<option value='+i+'>만 '+i+'세</option>';
             }
           }
             ageHTML +=        '</select>';
@@ -636,11 +635,11 @@ var FE = window.FE || (function(){
           obj.age.push(selectBox);
         },
         Data: function(){
-                totalAdultNum = 0;
+          totalAdultNum = 0;
           totalChildNum = 0;
           for(i in roomArr){
-          totalAdultNum += roomArr[i].adultNum;
-          totalChildNum += roomArr[i].childNum;
+            totalAdultNum += roomArr[i].adultNum;
+            totalChildNum += roomArr[i].childNum;
           }
           // $result.find('li:eq(0) span').text(roomArr.length);
           // $result.find('li:eq(1) span').text(totalAdultNum);
@@ -912,8 +911,7 @@ function commonSearch(){
 			_MDCnt = _MDMax;
 			//alert('여정은 총 ' + _MDCnt + '개 까지만 가능합니다.\n' + _MDCnt + '개 이상의 여정이 있으시다면 1;1문의로 요청해 주시기 바랍니다.');
 			if($(this).hasClass('disabled')){ return false; }
-		}
-		else{
+		}else{
 			$('.o-multiway .md-'+_MDCnt).addClass('on');
 			if(_MDCnt > _MDMinCnt){
 				$('.o-multiway .md-'+_MDMinCnt).find('.btn-add').show();
@@ -1041,8 +1039,8 @@ function commonSearch(){
 	//다구간 - 다중날짜 체크
 	function checkMdDate(num, date){
 		var mdDateArrGetTime = [],
-			newDate = date.getTime(),
-			isDelete = false;
+        newDate = date.getTime(),
+        isDelete = false;
 		
 		//getTime 셋팅
 		for(var i in _mdDateArr){
@@ -1064,8 +1062,7 @@ function commonSearch(){
 						_mdDateArr.splice(i, 1, $.datepicker.formatDate('yy/mm/dd', date));
 						isDelete = true;
 					}
-				}
-				else if(i > num){
+				}else if(i > num){
 					//console.log('기준보다 큰 구간 탐색 = ', i);
 					if(mdDateArrGetTime[i] != "" && mdDateArrGetTime[i] < newDate){
 						//console.log('기준보다 큰 구간 탐색 - 선택보다 더 큼 이후 전부 비우기! = ', mdDateArrGetTime[i], i);
@@ -1073,18 +1070,15 @@ function commonSearch(){
 						_mdDateArr.splice(num, 1, $.datepicker.formatDate('yy/mm/dd', date));
 						isDelete = true;
 					}
-				}
-				else{
+				}else{
 					//console.log('비어있거나, 범위유효', i);
 					_mdDateArr.splice(num, 1, $.datepicker.formatDate('yy/mm/dd', date));
 				}
-			}
-			else{
+			}else{
 				//console.log('날짜 비우기!', i);
 				_mdDateArr.splice(i, 1, "");
 			}
 		}
-		
 		initMDDate(); //다중날짜 리셋
 	}
 
