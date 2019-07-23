@@ -538,6 +538,33 @@
               </div>
             </div>
             <!-- //TOOLTIP -->
+
+            <!-- PRICE RANGE -->
+            <div class="guide-box" id="price-range">
+              <h2 class="tit">PRICE RANGE</h2>
+              <div class="gb-inner">
+<div class="slider-price-wrap">
+  <div id="priceRangeSet" class="slider-price"></div>
+  <div class="slider-result">
+    <p class="left">
+      <span class="num" id="priceRangeMin" name="priceRangeMin"></span>
+      <span>원</span>
+    </p>
+    <p class="right">
+      <span class="num" id="priceRangeMax" name="priceRangeMax"></span>
+      <span>원</span>
+    </p>
+  </div>
+</div>
+<script>
+  $(function(){
+    FE.initPriceRange(0,1000000); // 로드시 혹은 로드 후 리스팅된 상품가격의 최소 최대값
+  });
+</script>
+              </div>
+            </div>
+            <!-- //PRICE RANGE -->
+
             <div class="guide-menu">
               <h2>GUIDE MENU <span></span></h2>
               <div class="guide-sch">
