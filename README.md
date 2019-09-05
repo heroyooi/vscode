@@ -116,6 +116,36 @@
 4. 저장소 주소 입력
 5. 저장소 소스가 복제될 폴더 선택
 
+### Simple React Snippets
+
+```command
+imr
+```
+```JavaScript
+import React from 'react';
+```
+
+```command
+imrc
+```
+```JavaScript
+import React, { Component } from 'react';
+```
+
+```command
+cc
+```
+```JavaScript
+class  extends Component {
+  state = {  }
+  render() { 
+    return (  );
+  }
+}
+ 
+export default ;
+```
+
 ### Contributor
 
 - heroyooi
