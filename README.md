@@ -66,6 +66,18 @@
 }
 ```
 
+### emmet - vue 지원
+
+```json
+{
+    "emmet.triggerExpansionOnTab": true, // 탭키를 누르면 바로 자동완성 되도록 설정
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "vue": "html"
+    }
+}
+```
+
 ### SFTP
 
 1. VSCode 확장기능 : SFTP 설치
