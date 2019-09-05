@@ -130,25 +130,16 @@
 
 ### Simple React Snippets
 
-```command
-imr
-```
 ```JavaScript
-import React from 'react';
+import React from 'react'; // imr
 ```
 
-```command
-imrc
-```
 ```JavaScript
-import React, { Component } from 'react';
+import React, { Component } from 'react'; // imrc
 ```
 
-```command
-cc
-```
 ```JavaScript
-class  extends Component {
+class  extends Component { // cc
   state = {  }
   render() { 
     return (  );
