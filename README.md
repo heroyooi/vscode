@@ -149,6 +149,14 @@ class  extends Component { // cc
 export default ;
 ```
 
+```JavaScript
+const  = () => { // sfc
+  return (  );
+}
+ 
+export default ;
+```
+
 ### Contributor
 
 - heroyooi
