@@ -152,7 +152,8 @@ textarea{
 .vw{
     font-size:40px;
     @media all and (max-width:640px){
-        font-size:get-vw(40px);
+        font-size:calc-vw(40px);
+        padding:calc-vw-2(10px, 20px, padding);
     }
 }
 /* 2019-07-17 */
