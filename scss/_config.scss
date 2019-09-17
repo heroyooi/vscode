@@ -1,5 +1,6 @@
 $font-family: 'ZCOOL XiaoWei', 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
 
+$viewport: 640;
 $img-path: '/images/';
 $img-comm-path: $img-path + 'common/';
 
@@ -47,4 +48,9 @@ $min-width: 1200px;
 //Function Group
 @function lth-size($lth: 1){
     @return $fullSize / $lth;
+}
+//vw calculate
+@function get-vw($target) {
+    $vw-context: ($viewport * 0.01) * 1px;
+    @return ($target / $vw-context) * 1vw;
 }

@@ -149,4 +149,10 @@ textarea{
    clip:rect(1px 1px 1px 1px);/* IE6, IE7*/
    clip:rect(1px, 1px, 1px, 1px);
 }
+.vw{
+    font-size:40px;
+    @media all and (max-width:640px){
+        font-size:get-vw(40px);
+    }
+}
 /* 2019-07-17 */
