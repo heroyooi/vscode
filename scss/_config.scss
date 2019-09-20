@@ -49,7 +49,7 @@ $min-width: 1200px;
 @function lth-size($lth: 1){
     @return $fullSize / $lth;
 }
-//vw calculate
+//vw calculate (px -> vw로 변환)
 @function calc-vw($vw) {
     $vw-context: ($viewport * 0.01) * 1px;
     @return ($vw / $vw-context) * 1vw;
