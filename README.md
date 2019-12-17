@@ -50,6 +50,7 @@
 
 - Alt + L + O : 라이브서버 열기
 - Alt + L + C : 라이브서버 닫기
+- Alt + Shift + F : 코드 정리 (내 tabSize에 맞춰서 자동 정리)
 
 ## Using Extensions
 
