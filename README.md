@@ -27,14 +27,16 @@
 - Auto Close Tag
 - Auto Rename Tag
 - Color Highlight
-- Reactjs code snippets
-- JS JSX Snippets
 - Live Server
 - SFTP
 - Live Sass Compiler
 - GitLens
 - Git History
 - Vetur
+
+- Reactjs code snippets
+- JS JSX Snippets
+- Auto Import
 
 ## VSCode Keyboard Shortcuts
 
