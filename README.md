@@ -54,6 +54,8 @@
 - Alt + L + C : 라이브서버 닫기
 - Alt + Shift + F : 코드 정리 (내 tabSize에 맞춰서 자동 정리)
 
+- Ctrl + K + F (영역 드래그 한 상태에서) : 한줄 코드를 정리해줌
+
 ## Using Extensions
 
 ### emmet - jsx 지원
