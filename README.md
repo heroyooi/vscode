@@ -83,6 +83,18 @@
 }
 ```
 
+### 파일검색 제외항목 추가
+```json
+{
+  "files.exclude": {
+    "**/build/": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+  }
+}
+```
+
 ### SFTP
 
 1. VSCode 확장기능 : SFTP 설치
