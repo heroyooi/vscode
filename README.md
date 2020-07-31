@@ -137,6 +137,13 @@
 ```
 4. 하단에 Watch Sass 클릭하면 자동으로 Sass 컴파일링 시작
 
+### prettier 적용
+```json
+{ 
+  "editor.formatOnSave": true
+}
+```
+
 ### GIT
 
 1. VSCode 확장기능 : GitLens, Git History 설치
