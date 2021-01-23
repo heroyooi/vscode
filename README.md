@@ -9,7 +9,7 @@
 
 ```json
 {
-    "editor.tabSize": 2 // tabSize 변경 - default: 4
+    "editor.tabSize": 2
 }
 ```
 
