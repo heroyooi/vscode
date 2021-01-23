@@ -24,8 +24,10 @@
 
 ## VSCode Extensions
 
+- indent-rainbow
 - Auto Close Tag
 - Auto Rename Tag
+- Auto Complete Tag
 - Color Highlight
 - Live Server
 - SFTP
@@ -63,7 +65,7 @@
 1. Ctrl + , : Settings 탭 열기
 2. Edit in settings.json > 다음 내용 추가
 
-```json
+```Json
 {
     "emmet.includeLanguages": {
         "javascript": "javascriptreact"
@@ -73,7 +75,7 @@
 
 ### emmet - vue 지원
 
-```json
+```Json
 {
     "emmet.triggerExpansionOnTab": true, // 탭키를 누르면 바로 자동완성 되도록 설정
     "emmet.includeLanguages": {
@@ -84,13 +86,22 @@
 ```
 
 ### 파일검색 제외항목 추가
-```json
+```Json
 {
   "files.exclude": {
     "**/build/": true
   },
   "search.exclude": {
     "**/node_modules": true,
+  }
+}
+```
+
+### eslint 관련 - 저장할  eslint 에러 수정
+```Json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
   }
 }
 ```
