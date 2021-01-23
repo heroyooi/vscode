@@ -77,7 +77,7 @@
 
 ```Json
 {
-    "emmet.triggerExpansionOnTab": true, // 탭키를 누르면 바로 자동완성 되도록 설정
+    "emmet.triggerExpansionOnTab": true,
     "emmet.includeLanguages": {
         "vue-html": "html",
         "vue": "html"
