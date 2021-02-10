@@ -24,6 +24,7 @@
 
 ## VSCode Extensions
 
+- ESLint
 - indent-rainbow
 - Auto Close Tag
 - Auto Rename Tag
