@@ -9,7 +9,7 @@
 
 ```json
 {
-    "editor.tabSize": 2
+  "editor.tabSize": 2
 }
 ```
 
@@ -48,25 +48,28 @@
 
 ```Json
 {
-    "emmet.includeLanguages": {
-        "javascript": "javascriptreact"
-    }
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }
 ```
+
 
 ### emmet - vue 지원
 
 ```Json
 {
-    "emmet.triggerExpansionOnTab": true,
-    "emmet.includeLanguages": {
-        "vue-html": "html",
-        "vue": "html"
-    }
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "vue": "html"
+  }
 }
 ```
 
+
 ### 파일검색 제외항목 추가
+
 ```Json
 {
   "files.exclude": {
@@ -78,12 +81,20 @@
 }
 ```
 
-### eslint 관련 - 저장할  eslint 에러 수정
+### eslint 관련 - 저장할 eslint 에러 자동으로 수정
 ```Json
 {
   "editor.codeActionsOnSave": {
     "source.fixAll": true
   }
+}
+```
+
+### prettier 관련 - prettier 규칙대로 저장 시 자동으로 수정
+```Json
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
 
@@ -95,14 +106,14 @@
 4. sftp.json 파일이 생성되면 다음과 같이 세팅한다.
 ```json
 {
-    "name": "MyServer",
-    "host": "heroyooi.ivyro.net",
-    "protocol": "ftp",
-    "port": 21,
-    "username": "heroyooi",
-    "password": "**********",
-    "remotePath": "/public_html",
-    "uploadOnSave": true
+  "name": "MyServer",
+  "host": "heroyooi.ivyro.net",
+  "protocol": "ftp",
+  "port": 21,
+  "username": "heroyooi",
+  "password": "**********",
+  "remotePath": "/public_html",
+  "uploadOnSave": true
 }
 ```
 
@@ -113,18 +124,18 @@
 3. Extenstions > Edit in settings.json > 다음 내용 추가
 ```json
 {
-    "liveSassCompile.settings.excludeList": [
-        "**/node_modules/**",
-        ".vscode/**",
-    ],
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "compressed",
-            "extensionName": ".css",
-            "savePath": "~/../css"
-        }
-    ],
-    "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    ".vscode/**",
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "~/../css"
+    }
+  ],
+  "liveSassCompile.settings.generateMap": true,
 }
 ```
 - liveSassCompile.settings.formats 옵션
