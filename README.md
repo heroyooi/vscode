@@ -46,7 +46,7 @@
 1. Ctrl + , : Settings 탭 열기
 2. Edit in settings.json > 다음 내용 추가
 
-```Json
+```Json (settings.json)
 {
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -57,7 +57,7 @@
 
 ### emmet - vue 지원
 
-```Json
+```Json (settings.json)
 {
   "emmet.triggerExpansionOnTab": true,
   "emmet.includeLanguages": {
@@ -70,7 +70,7 @@
 
 ### 파일검색 제외항목 추가
 
-```Json
+```Json (settings.json)
 {
   "files.exclude": {
     "**/build/": true
@@ -81,8 +81,10 @@
 }
 ```
 
+
 ### eslint 관련 - 저장할 eslint 에러 자동으로 수정
-```Json
+
+```Json (settings.json)
 {
   "editor.codeActionsOnSave": {
     "source.fixAll": true
@@ -90,13 +92,96 @@
 }
 ```
 
+- 아래 파일 생성
+  - 예1) Vue 프로젝트
+```Json (.eslintrc)
+{
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "plugin:vue/recommended"
+  ],
+  "plugins": [],
+  "rules": {
+    "vue/max-attributes-per-line": "off",
+    "vue/singleline-html-element-content-newline": "off"
+  }
+}
+```
+  - 예2) React 프로젝트
+```Json (.eslintrc)
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "import",
+    "react-hooks"
+  ],
+  "rules": {
+    "jsx-a11y/label-has-associated-control": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-console": "off",
+    "no-underscore-dangle": "off",
+    "react/forbid-prop-types": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "object-curly-newline": "off",
+    "linebreak-style": "off",
+    "no-param-reassign": "off",
+    "react/require-default-props": "off",
+    "max-len": "off",
+    "consistent-return": "off",
+    "no-alert": "off"
+  }
+}
+```
+
 ### prettier 관련 - prettier 규칙대로 저장 시 자동으로 수정
-```Json
+
+```Json (settings.json)
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
 ```
+
+- 아래 파일 생성
+```Json (.prettierrc)
+{
+  "printWidth": 120,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "trailingComma": "all",
+  "semi": true
+}
+```
+- eslint와 prettier를 연결해서 사용하는 경우 아래 파일도 추가 생성
+```Json (.eslintrc)
+{
+  "extends": ["plugin:prettier/recommended"]
+}
+```
+
 
 ### SFTP
 
@@ -104,7 +189,7 @@
 2. Ctrl + Shift + P
 3. >SFTP: Config
 4. sftp.json 파일이 생성되면 다음과 같이 세팅한다.
-```json
+```Json
 {
   "name": "MyServer",
   "host": "heroyooi.ivyro.net",
@@ -117,12 +202,13 @@
 }
 ```
 
+
 ### Live Sass Compiler
 
 1. VSCode 확장기능 : Live Sass Compiler 설치
 2. Ctrl + , : Settings 탭 열기
 3. Extenstions > Edit in settings.json > 다음 내용 추가
-```json
+```Json (settings.json)
 {
   "liveSassCompile.settings.excludeList": [
     "**/node_modules/**",
@@ -144,13 +230,6 @@
 - liveSassCompile.settings.generateMap: 컴파일링시 .map 파일을 생성한다. (크롬 sass 디버깅을 위해 필요)
 
 4. 하단에 Watch Sass 클릭하면 자동으로 Sass 컴파일링 시작
-
-### prettier 적용
-```json
-{ 
-  "editor.formatOnSave": true
-}
-```
 
 ### GIT
 
