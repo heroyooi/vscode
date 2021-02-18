@@ -124,11 +124,14 @@
             "savePath": "~/../css"
         }
     ],
-    "liveSassCompile.settings.generateMap": true, // 컴파일링시 .map 파일을 생성한다. (크롬 sass 디버깅을 위해 필요)
+    "liveSassCompile.settings.generateMap": true,
 }
 ```
-- 컴파일링 format: (nested, expanded, compact, compressed)
-- 컴파일링 savePath: (scss, css폴더가 같을 경우 동일하게 설정 / ~: 현재 폴더)
+- liveSassCompile.settings.formats 옵션
+  - 컴파일링 format: (nested, expanded, compact, compressed)
+  - 컴파일링 savePath: (scss, css폴더가 같을 경우 동일하게 설정 / ~: 현재 폴더)
+- liveSassCompile.settings.generateMap: 컴파일링시 .map 파일을 생성한다. (크롬 sass 디버깅을 위해 필요)
+
 4. 하단에 Watch Sass 클릭하면 자동으로 Sass 컴파일링 시작
 
 ### prettier 적용
