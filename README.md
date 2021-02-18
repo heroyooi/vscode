@@ -25,6 +25,7 @@
 ## VSCode Extensions
 
 - ESLint
+- Prettier
 - indent-rainbow
 - Auto Close Tag
 - Auto Rename Tag
@@ -36,30 +37,9 @@
 - GitLens
 - Git History
 - Vetur
-
 - Reactjs code snippets
 - JS JSX Snippets
 - Auto Import
-
-## VSCode Keyboard Shortcuts
-
-- Ctrl + D : 단어 선택
-- Shift + Alt + Down : 한줄 복사
-- Ctrl + B : 좌측판넬 토글
-- Alt + Z : Word wrap 토글
-
-- Ctrl + Shift + F : 프로젝트에서 검색
-- Ctrl + Shift + H : 프로젝트에서 검색 및 바꾸기
-- Ctrl + Shift + P : 모든 단축키 표시
-- Ctrl + P : 파일명으로 빠른 열기
-
-- Alt + L + O : 라이브서버 열기
-- Alt + L + C : 라이브서버 닫기
-- Alt + Shift + F : 코드 정리 (내 tabSize에 맞춰서 자동 정리)
-
-- Ctrl + K + F (영역 드래그 한 상태에서) : 한줄 코드를 정리해줌
-
-## Using Extensions
 
 ### emmet - jsx 지원
 
@@ -139,14 +119,16 @@
     ],
     "liveSassCompile.settings.formats": [
         {
-            "format": "compressed", // 컴파일링 포맷(nested, expanded, compact, compressed)
-            "extensionName": ".css", // default
-            "savePath": "~/../css" // 컴파일링 경로(scss, css폴더가 같을 경우 동일하게 설정 / ~: 현재 폴더)
+            "format": "compressed",
+            "extensionName": ".css",
+            "savePath": "~/../css"
         }
     ],
     "liveSassCompile.settings.generateMap": true, // 컴파일링시 .map 파일을 생성한다. (크롬 sass 디버깅을 위해 필요)
 }
 ```
+- 컴파일링 format: (nested, expanded, compact, compressed)
+- 컴파일링 savePath: (scss, css폴더가 같을 경우 동일하게 설정 / ~: 현재 폴더)
 4. 하단에 Watch Sass 클릭하면 자동으로 Sass 컴파일링 시작
 
 ### prettier 적용
@@ -193,10 +175,27 @@ const  = () => { // sfc
 export default ;
 ```
 
+## VSCode Keyboard Shortcuts
+
+- Ctrl + D : 단어 선택
+- Shift + Alt + Down : 한줄 복사
+- Ctrl + B : 좌측판넬 토글
+- Alt + Z : Word wrap 토글
+
+- Ctrl + Shift + F : 프로젝트에서 검색
+- Ctrl + Shift + H : 프로젝트에서 검색 및 바꾸기
+- Ctrl + Shift + P : 모든 단축키 표시
+- Ctrl + P : 파일명으로 빠른 열기
+
+- Alt + L + O : 라이브서버 열기
+- Alt + L + C : 라이브서버 닫기
+- Alt + Shift + F : 코드 정리 (내 tabSize에 맞춰서 자동 정리)
+
+- Ctrl + K + F (영역 드래그 한 상태에서) : 한줄 코드를 정리해줌
+
 ### Contributor
 
 - heroyooi
-- wildjy
 
 ## Node 관련 명령어
 
