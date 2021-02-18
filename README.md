@@ -46,6 +46,7 @@
 1. Ctrl + , : Settings 탭 열기
 2. Edit in settings.json > 다음 내용 추가
 
+- settings.json
 ```Json (settings.json)
 {
   "emmet.includeLanguages": {
@@ -57,6 +58,7 @@
 
 ### emmet - vue 지원
 
+- settings.json
 ```Json (settings.json)
 {
   "emmet.triggerExpansionOnTab": true,
@@ -70,6 +72,7 @@
 
 ### 파일검색 제외항목 추가
 
+- settings.json
 ```Json (settings.json)
 {
   "files.exclude": {
@@ -84,6 +87,7 @@
 
 ### eslint 관련 - 저장할 eslint 에러 자동으로 수정
 
+- settings.json
 ```Json (settings.json)
 {
   "editor.codeActionsOnSave": {
@@ -94,6 +98,7 @@
 
 - 아래 파일 생성
   - 예1) Vue 프로젝트
+    - .eslintrc
 ```Json (.eslintrc)
 {
   "parserOptions": {
@@ -115,6 +120,7 @@
 }
 ```
   - 예2) React 프로젝트
+    - .eslintrc
 ```Json (.eslintrc)
 {
   "parser": "babel-eslint",
@@ -158,6 +164,7 @@
 
 ### prettier 관련 - prettier 규칙대로 저장 시 자동으로 수정
 
+- settings.json
 ```Json (settings.json)
 {
   "editor.formatOnSave": true,
@@ -166,6 +173,7 @@
 ```
 
 - 아래 파일 생성
+- .prettierrc
 ```Json (.prettierrc)
 {
   "printWidth": 120,
@@ -176,6 +184,7 @@
 }
 ```
 - eslint와 prettier를 연결해서 사용하는 경우 아래 파일도 추가 생성
+- .eslintrc
 ```Json (.eslintrc)
 {
   "extends": ["plugin:prettier/recommended"]
@@ -189,6 +198,7 @@
 2. Ctrl + Shift + P
 3. >SFTP: Config
 4. sftp.json 파일이 생성되면 다음과 같이 세팅한다.
+- sftp.json
 ```Json
 {
   "name": "MyServer",
@@ -208,6 +218,7 @@
 1. VSCode 확장기능 : Live Sass Compiler 설치
 2. Ctrl + , : Settings 탭 열기
 3. Extenstions > Edit in settings.json > 다음 내용 추가
+  - settings.json
 ```Json (settings.json)
 {
   "liveSassCompile.settings.excludeList": [
