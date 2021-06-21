@@ -40,6 +40,7 @@
 - Reactjs code snippets
 - JS JSX Snippets
 - Auto Import
+- Project Manager - Alessandro Fragnani
 
 ### emmet - jsx 지원
 
