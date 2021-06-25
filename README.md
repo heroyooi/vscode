@@ -24,6 +24,8 @@
 
 ## VSCode Extensions
 
+### 필수
+
 - ESLint
 - Prettier
 - indent-rainbow
@@ -31,16 +33,19 @@
 - Auto Rename Tag
 - Auto Complete Tag
 - Color Highlight
-- Live Server
-- SFTP
-- Live Sass Compiler
 - GitLens
 - Git History
 - Vetur
-- Reactjs code snippets
-- JS JSX Snippets
 - Auto Import
 - Project Manager - Alessandro Fragnani
+
+### 선택
+
+- Live Server
+- Reactjs code snippets
+- JS JSX Snippets
+- Live Sass Compiler
+- SFTP
 
 ### emmet - jsx 지원
 
