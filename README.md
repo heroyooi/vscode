@@ -178,6 +178,13 @@
 }
 ```
 
+- 저장 시 홀따옴표로 저장되도록 변경
+```Json (settings.json)
+{
+  "prettier.singleQuote": true
+}
+```
+
 - 아래 파일 생성
 - .prettierrc
 ```Json (.prettierrc)
