@@ -205,6 +205,17 @@
 }
 ```
 
+- prisma를 사용할 경우 추가적으로 필요한 세팅
+- settings.json
+```Json (settings.json)
+{
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma",
+    "editor.formatOnSave": true
+  }
+}
+```
+
 
 ### SFTP
 
