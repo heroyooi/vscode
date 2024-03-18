@@ -334,3 +334,30 @@ export default ;
 npm i -g rimraf
 rimraf node_modules
 ```
+
+## ETC - VSCODE 세팅 관련
+
+### inlayHints - 타입추론 활성화
+
+```json
+{
+  "workbench.colorCustomizations": {
+    "editorInlayHint.background": "#3f3f3f",
+    "editorInlayHint.foreground": "#c0c0c0"
+  },
+  "typescript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.inlayHints.parameterTypes.enabled": true,
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.parameterTypes.enabled": true,
+  "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "editor.inlayHints.enabled": "onUnlessPressed",
+  "editor.inlayHints.padding": true,
+  "javascript.inlayHints.parameterNames.enabled": "all"
+}
+```
